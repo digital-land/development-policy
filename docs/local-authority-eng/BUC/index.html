@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8">
+    <title>GOV.UK - The best place to find government services and information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+    
+
+    
+	<link href="https://digital-land.github.io/stylesheets/dl-frontend.css" rel="stylesheet" />
+	
+
+
+    
+    
+    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+
+    
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+    
+
+    
+<!-- Cookie banner partial version 1.0.1 -->
+<div id="global-cookie-message" class="govuk-clearfix global-cookie-message" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="">
+
+  <div id="cookie-banner" class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="cookie-banner__message govuk-!-margin-top-6">
+          <h2 class="govuk-heading-m">Tell us whether you accept cookies</h2>
+          <p class="govuk-body">We use <a class="govuk-link" href="/cookies">cookies to collect information</a> about how you use the Digital Land website to make the website work as well as possible.</p>
+        </div>
+        <div class="cooke-banner__buttons govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <button class="govuk-button" onclick="acceptCookies();showCookieConfirmation();">Accept all cookies</button>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <a class="govuk-button" href="/cookies">Set cookie preferences</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-confirmation" class="govuk-width-container govuk-!-padding-top-6" tabindex="-1" style="display: none;">
+    <p class="cookie-banner__confirmation-message govuk-body">You’ve accepted all cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+    <button class="cookie-banner__hide-button govuk-button govuk-button--secondary" onclick="document.getElementById('cookie-confirmation').style.display='none';">Hide</button>
+  </div>
+
+</div>
+
+
+<header role="banner" id="global-header" class="govuk-header  with-proposition dl-header" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="header-proposition">
+      <div class="govuk-header__content">
+        <a href="https://digital-land.github.io/" class="govuk-header__link govuk-header__link--service-name">
+        Digital Land
+        </a>
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/about">Team</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/project/">Projects</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/weeknote/">Weeknotes</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/blog-post/">Blog</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/guidance/">Guidance</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/dataset/">Datasets</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/organisation/">Organisations</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/map/">Map</a>
+            </li>
+          </ul>
+        </nav>
+        </div>
+    </div>
+  </div>
+</header>
+
+
+
+    
+      <div class="govuk-width-container ">
+        
+  
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  prototype
+</strong><span class="govuk-phase-banner__text">
+      This is a prototype. Please provide feedback to the Digital Land team.
+    </span>
+  </p>
+</div>
+  
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+  
+    
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Digital Land</a>
+    </li>
+    
+  
+    
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../../">Development Policy</a>
+    </li>
+    
+  
+    
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../">Local Authority Eng</a>
+    </li>
+    
+  
+    
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">BUC</li>
+    
+  
+  </ol>
+</div>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          
+
+<h1 class="govuk-heading-xl">Development-policy</h1>
+
+
+
+<div>
+    <!-- <ul class="govuk-list govuk-list--bullet"> -->
+    <table>
+    
+      <tr><td><a href="./avdlp-GP2">avdlp-GP2</a></td><td> Affordable Housing</td></tr>
+    
+      <tr><td><a href="./avdlp-GP3">avdlp-GP3</a></td><td> Low cost market housing</td></tr>
+    
+      <tr><td><a href="./avdlp-GP4">avdlp-GP4</a></td><td> Affordable housing on small sites for local needs</td></tr>
+    
+      <tr><td><a href="./avdlp-GP6">avdlp-GP6</a></td><td> Conversion or subdivision of existing dwellings</td></tr>
+    
+      <tr><td><a href="./avdlp-GP8">avdlp-GP8</a></td><td> Protection of the amenity of residents</td></tr>
+    
+      <tr><td><a href="./avdlp-GP9">avdlp-GP9</a></td><td> Extensions of dwellings</td></tr>
+    
+      <tr><td><a href="./avdlp-GP11">avdlp-GP11</a></td><td> Annexes to dwellings in the countryside</td></tr>
+    
+      <tr><td><a href="./avdlp-GP17">avdlp-GP17</a></td><td> Retention in use of existing employment sites</td></tr>
+    
+      <tr><td><a href="./avdlp-GP24">avdlp-GP24</a></td><td> Car parking guidelines</td></tr>
+    
+      <tr><td><a href="./avdlp-GP25">avdlp-GP25</a></td><td> Re-opening of rail routes</td></tr>
+    
+      <tr><td><a href="./avdlp-GP26">avdlp-GP26</a></td><td> Safeguarded station sites</td></tr>
+    
+      <tr><td><a href="./avdlp-GP30">avdlp-GP30</a></td><td> Safeguarded road schemes</td></tr>
+    
+      <tr><td><a href="./avdlp-GP32">avdlp-GP32</a></td><td> Retention of shops, public houses and post offices</td></tr>
+    
+      <tr><td><a href="./avdlp-GP35">avdlp-GP35</a></td><td> Design of new development proposals</td></tr>
+    
+      <tr><td><a href="./avdlp-GP38">avdlp-GP38</a></td><td> Landscaping of new development proposals</td></tr>
+    
+      <tr><td><a href="./avdlp-GP39">avdlp-GP39</a></td><td> Existing trees and hedgerows</td></tr>
+    
+      <tr><td><a href="./avdlp-GP40">avdlp-GP40</a></td><td> Retention of existing trees and hedgerows</td></tr>
+    
+      <tr><td><a href="./avdlp-GP45">avdlp-GP45</a></td><td> Secured by Design considerations</td></tr>
+    
+      <tr><td><a href="./avdlp-GP53">avdlp-GP53</a></td><td> New development in and adjacent to Conservation Areas</td></tr>
+    
+      <tr><td><a href="./avdlp-GP57">avdlp-GP57</a></td><td> Advertisements in Conservation Areas</td></tr>
+    
+      <tr><td><a href="./avdlp-GP59">avdlp-GP59</a></td><td> Preservation of archaeological remains</td></tr>
+    
+      <tr><td><a href="./avdlp-GP60">avdlp-GP60</a></td><td> Development and Parks or Gardens of Special Historic Interest</td></tr>
+    
+      <tr><td><a href="./avdlp-GP66">avdlp-GP66</a></td><td> Access corridors and buffers adjacent to watercourses</td></tr>
+    
+      <tr><td><a href="./avdlp-GP69">avdlp-GP69</a></td><td> Hotel and motel development</td></tr>
+    
+      <tr><td><a href="./avdlp-GP70">avdlp-GP70</a></td><td> Changes of use of rural buildings and historic buildings to hotel use</td></tr>
+    
+      <tr><td><a href="./avdlp-GP71">avdlp-GP71</a></td><td> Bed and breakfast and guesthouse development</td></tr>
+    
+      <tr><td><a href="./avdlp-GP72">avdlp-GP72</a></td><td> Proposals for self-catering holiday accommodation and holiday homes</td></tr>
+    
+      <tr><td><a href="./avdlp-GP73">avdlp-GP73</a></td><td> Proposals for camping and touring caravan sites</td></tr>
+    
+      <tr><td><a href="./avdlp-GP77">avdlp-GP77</a></td><td> Horse-related development</td></tr>
+    
+      <tr><td><a href="./avdlp-GP78">avdlp-GP78</a></td><td> Stables, loose boxes and other buildings for horses</td></tr>
+    
+      <tr><td><a href="./avdlp-GP79">avdlp-GP79</a></td><td> Proposals for noisy sports</td></tr>
+    
+      <tr><td><a href="./avdlp-GP80">avdlp-GP80</a></td><td> The Wendover Arm of the Grand Union Canal</td></tr>
+    
+      <tr><td><a href="./avdlp-GP81">avdlp-GP81</a></td><td> Development of canal-related facilities</td></tr>
+    
+      <tr><td><a href="./avdlp-GP84">avdlp-GP84</a></td><td> Public rights of way</td></tr>
+    
+      <tr><td><a href="./avdlp-GP86">avdlp-GP86</a></td><td> Provision of outdoor playing space</td></tr>
+    
+      <tr><td><a href="./avdlp-GP87">avdlp-GP87</a></td><td> Application of open space policies</td></tr>
+    
+      <tr><td><a href="./avdlp-GP88">avdlp-GP88</a></td><td> Payment in lieu of providing sports and play areas</td></tr>
+    
+      <tr><td><a href="./avdlp-GP90">avdlp-GP90</a></td><td> Provision of indoor sports facilities</td></tr>
+    
+      <tr><td><a href="./avdlp-GP91">avdlp-GP91</a></td><td> Provision of amenity areas</td></tr>
+    
+      <tr><td><a href="./avdlp-GP92">avdlp-GP92</a></td><td> Safeguarding of allotment land</td></tr>
+    
+      <tr><td><a href="./avdlp-GP93">avdlp-GP93</a></td><td> Safeguarding of community buildings and facilities</td></tr>
+    
+      <tr><td><a href="./avdlp-GP94">avdlp-GP94</a></td><td> Provision of community facilities and services</td></tr>
+    
+      <tr><td><a href="./avdlp-GP95">avdlp-GP95</a></td><td> Unneighbourly uses</td></tr>
+    
+      <tr><td><a href="./avdlp-GP99">avdlp-GP99</a></td><td> Development beneath overhead electricity lines</td></tr>
+    
+      <tr><td><a href="./avdlp-GP100">avdlp-GP100</a></td><td> Proposals for telecommunication development</td></tr>
+    
+      <tr><td><a href="./avdlp-AY1">avdlp-AY1</a></td><td> Considerations of traffic-generating proposals</td></tr>
+    
+      <tr><td><a href="./avdlp-AY2">avdlp-AY2</a></td><td> Additional financial contributions to the ALUT strategy</td></tr>
+    
+      <tr><td><a href="./avdlp-AY3">avdlp-AY3</a></td><td> Phasing of transport infrastructure</td></tr>
+    
+      <tr><td><a href="./avdlp-AY4">avdlp-AY4</a></td><td> Tring Road (former BPCC factory) site</td></tr>
+    
+      <tr><td><a href="./avdlp-AY5">avdlp-AY5</a></td><td> Stoke Mandeville Hospital site</td></tr>
+    
+      <tr><td><a href="./avdlp-AY6">avdlp-AY6</a></td><td> Bearbrook House site, Oxford Road</td></tr>
+    
+      <tr><td><a href="./avdlp-AY7">avdlp-AY7</a></td><td> TA Centre site, Oxford Road</td></tr>
+    
+      <tr><td><a href="./avdlp-AY8">avdlp-AY8</a></td><td> Ardenham Lane site</td></tr>
+    
+      <tr><td><a href="./avdlp-AY11">avdlp-AY11</a></td><td> Reallocated sites - Circus Fields</td></tr>
+    
+      <tr><td><a href="./avdlp-AY12">avdlp-AY12</a></td><td> Requirement for planning briefs and public consultation regarding MDAs</td></tr>
+    
+      <tr><td><a href="./avdlp-AY13">avdlp-AY13</a></td><td> Berryfields MDA</td></tr>
+    
+      <tr><td><a href="./avdlp-AY14">avdlp-AY14</a></td><td> Weedon Hill MDA</td></tr>
+    
+      <tr><td><a href="./avdlp-AY15">avdlp-AY15</a></td><td> Aston Clinton MDA</td></tr>
+    
+      <tr><td><a href="./avdlp-AY16">avdlp-AY16</a></td><td> Other employment sites</td></tr>
+    
+      <tr><td><a href="./avdlp-AY17">avdlp-AY17</a></td><td> Public transport to serve new developments</td></tr>
+    
+      <tr><td><a href="./avdlp-AY18">avdlp-AY18</a></td><td> Safeguarded land for new rail stops</td></tr>
+    
+      <tr><td><a href="./avdlp-AY20">avdlp-AY20</a></td><td> Development of the cycle network</td></tr>
+    
+      <tr><td><a href="./avdlp-AY21">avdlp-AY21</a></td><td> Parking policy guidelines</td></tr>
+    
+      <tr><td><a href="./avdlp-AY22">avdlp-AY22</a></td><td> Western Link Road</td></tr>
+    
+      <tr><td><a href="./avdlp-AY24">avdlp-AY24</a></td><td> Mixed-use redevelopment, Exchange Street</td></tr>
+    
+      <tr><td><a href="./avdlp-AY27">avdlp-AY27</a></td><td> Provision of new foodstore retailing</td></tr>
+    
+      <tr><td><a href="./avdlp-AY28">avdlp-AY28</a></td><td> Development within the Primary Shopping Frontages</td></tr>
+    
+      <tr><td><a href="./avdlp-AY29">avdlp-AY29</a></td><td> Development within the Central Shopping Area outside the Primary Shopping Frontages</td></tr>
+    
+      <tr><td><a href="./avdlp-AY30">avdlp-AY30</a></td><td> Café and restaurant development</td></tr>
+    
+      <tr><td><a href="./avdlp-AY31">avdlp-AY31</a></td><td> Housing in the town centre</td></tr>
+    
+      <tr><td><a href="./avdlp-AY34">avdlp-AY34</a></td><td> Redevelopment of Exchange Street / Canal Basin</td></tr>
+    
+      <tr><td><a href="./avdlp-BU1">avdlp-BU1</a></td><td> Housing development at Moreton Road</td></tr>
+    
+      <tr><td><a href="./avdlp-BU3">avdlp-BU3</a></td><td> Employment development at Buckingham</td></tr>
+    
+      <tr><td><a href="./avdlp-BU6">avdlp-BU6</a></td><td> Primary Shopping Frontages</td></tr>
+    
+      <tr><td><a href="./avdlp-BU7">avdlp-BU7</a></td><td> Development elsewhere in the CSA</td></tr>
+    
+      <tr><td><a href="./avdlp-BU8">avdlp-BU8</a></td><td> Sites at West Street / Moreton Road and Bridge Street</td></tr>
+    
+      <tr><td><a href="./avdlp-BU10">avdlp-BU10</a></td><td> Pedestrian priority area proposals</td></tr>
+    
+      <tr><td><a href="./avdlp-BU11">avdlp-BU11</a></td><td> Buckingham Riverside Walk</td></tr>
+    
+      <tr><td><a href="./avdlp-WE1">avdlp-WE1</a></td><td> Development at Princess Mary's Hospital</td></tr>
+    
+      <tr><td><a href="./avdlp-WE2">avdlp-WE2</a></td><td> The Central Shopping Area (CSA)</td></tr>
+    
+      <tr><td><a href="./avdlp-HA1">avdlp-HA1</a></td><td> Employment development at Thame Road</td></tr>
+    
+      <tr><td><a href="./avdlp-HA2">avdlp-HA2</a></td><td> Primary Shopping Frontage at Banks Parade</td></tr>
+    
+      <tr><td><a href="./avdlp-WI1">avdlp-WI1</a></td><td> Housing development at Verney Road</td></tr>
+    
+      <tr><td><a href="./avdlp-WI2">avdlp-WI2</a></td><td> Employment development at Buckingham Road</td></tr>
+    
+      <tr><td><a href="./avdlp-WI3">avdlp-WI3</a></td><td> The Central Shopping Area (CSA)</td></tr>
+    
+      <tr><td><a href="./avdlp-RA2">avdlp-RA2</a></td><td> Loss of open gaps and consolidation of settlements</td></tr>
+    
+      <tr><td><a href="./avdlp-RA3">avdlp-RA3</a></td><td> Extension of residential curtilages into open countryside</td></tr>
+    
+      <tr><td><a href="./avdlp-RA4">avdlp-RA4</a></td><td> Considerations for countryside recreation</td></tr>
+    
+      <tr><td><a href="./avdlp-RA5">avdlp-RA5</a></td><td> New golf courses</td></tr>
+    
+      <tr><td><a href="./avdlp-RA6">avdlp-RA6</a></td><td> Development in the Metropolitan Green Belt</td></tr>
+    
+      <tr><td><a href="./avdlp-RA8">avdlp-RA8</a></td><td> Development in the Areas of Attractive Landscape and Local Landscape Areas</td></tr>
+    
+      <tr><td><a href="./avdlp-RA11">avdlp-RA11</a></td><td> Conversion of buildings in the countryside</td></tr>
+    
+      <tr><td><a href="./avdlp-RA13">avdlp-RA13</a></td><td> Development within settlements listed in Appendix 4</td></tr>
+    
+      <tr><td><a href="./avdlp-RA14">avdlp-RA14</a></td><td> Development at the edge of Appendix 4 settlements</td></tr>
+    
+      <tr><td><a href="./avdlp-RA17">avdlp-RA17</a></td><td> Replacement dwellings in the Metropolitan Green Belt and special landscape areas</td></tr>
+    
+      <tr><td><a href="./avdlp-RA18">avdlp-RA18</a></td><td> Extensions to dwellings in the Metropolitan Green Belt and special landscape areas</td></tr>
+    
+      <tr><td><a href="./avdlp-RA24">avdlp-RA24</a></td><td> Occupancy conditions for horse-related dwellings</td></tr>
+    
+      <tr><td><a href="./avdlp-RA25">avdlp-RA25</a></td><td> Calvert</td></tr>
+    
+      <tr><td><a href="./avdlp-RA26">avdlp-RA26</a></td><td> Pitstone</td></tr>
+    
+      <tr><td><a href="./avdlp-RA29">avdlp-RA29</a></td><td> Proposals for new employment uses in the countryside</td></tr>
+    
+      <tr><td><a href="./avdlp-RA30">avdlp-RA30</a></td><td> Employment at Silverstone Motor Racing Circuit</td></tr>
+    
+      <tr><td><a href="./avdlp-RA31">avdlp-RA31</a></td><td> Silverstone Employment Area</td></tr>
+    
+      <tr><td><a href="./avdlp-RA32">avdlp-RA32</a></td><td> Employment at the Royal Ordnance site, Westcott</td></tr>
+    
+      <tr><td><a href="./avdlp-RA33">avdlp-RA33</a></td><td> Westcott Sports and Social Club</td></tr>
+    
+      <tr><td><a href="./avdlp-RA34">avdlp-RA34</a></td><td> Development of Newton Longville Brickworks</td></tr>
+    
+      <tr><td><a href="./avdlp-RA35">avdlp-RA35</a></td><td> Safeguarded road corridor at Newton Longville Brickworks</td></tr>
+    
+      <tr><td><a href="./avdlp-RA36">avdlp-RA36</a></td><td> Development causing traffic adversely affecting rural roads</td></tr>
+    
+      <tr><td><a href="./avdlp-RA37">avdlp-RA37</a></td><td> New accesses to inter-urban A-class or Trunk Roads</td></tr>
+    
+      <tr><td><a href="./valp-S1">valp-S1</a></td><td> Sustainable development for Aylesbury Vale</td></tr>
+    
+      <tr><td><a href="./valp-S2">valp-S2</a></td><td> Spatial strategy for growth</td></tr>
+    
+      <tr><td><a href="./valp-S3">valp-S3</a></td><td> Settlement hierarchy and cohesive development</td></tr>
+    
+      <tr><td><a href="./valp-S4">valp-S4</a></td><td> Green Belt</td></tr>
+    
+      <tr><td><a href="./valp-S5">valp-S5</a></td><td> Infrastructure</td></tr>
+    
+      <tr><td><a href="./valp-S6">valp-S6</a></td><td> Gypsy, Traveller and Travelling Showpeople provision</td></tr>
+    
+      <tr><td><a href="./valp-S7">valp-S7</a></td><td> Previously developed land</td></tr>
+    
+      <tr><td><a href="./valp-S8">valp-S8</a></td><td> Neighbourhood plans</td></tr>
+    
+      <tr><td><a href="./valp-S9">valp-S9</a></td><td> Monitoring and review</td></tr>
+    
+      <tr><td><a href="./valp-D1">valp-D1</a></td><td> Delivering Aylesbury Garden Town</td></tr>
+    
+      <tr><td><a href="./valp-D1-AGT1">valp-D1-AGT1</a></td><td> South Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-AGT2">valp-D1-AGT2</a></td><td> South west Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-AGT3">valp-D1-AGT3</a></td><td> Aylesbury north of A41</td></tr>
+    
+      <tr><td><a href="./valp-D1-AGT4">valp-D1-AGT4</a></td><td> Aylesbury south of A41</td></tr>
+    
+      <tr><td><a href="./valp-D1-AGT5">valp-D1-AGT5</a></td><td> Berryfields</td></tr>
+    
+      <tr><td><a href="./valp-D1-AGT6">valp-D1-AGT6</a></td><td> Kingsbrook</td></tr>
+    
+      <tr><td><a href="./valp-D1-AYL032">valp-D1-AYL032</a></td><td> Ardenham Lane, Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-AYL073">valp-D1-AYL073</a></td><td> Land at Thame Road/Leach Road, Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-AYL052">valp-D1-AYL052</a></td><td> PO Sorting Office, Cambridge Street, Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-AYL059">valp-D1-AYL059</a></td><td> Land at junction of Buckingham Street and New Street, Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-AYL077">valp-D1-AYL077</a></td><td> Oaklands Hostel, 3 Bierton Rd, Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-AYL063">valp-D1-AYL063</a></td><td> Hampden House, Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-AYL068">valp-D1-AYL068</a></td><td> Land north of Manor Hospital, Bierton Rd, Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-AYL115">valp-D1-AYL115</a></td><td> Rabans Lane, Aylesbury</td></tr>
+    
+      <tr><td><a href="./valp-D1-NLV001">valp-D1-NLV001</a></td><td> Salden Chase</td></tr>
+    
+      <tr><td><a href="./valp-D2">valp-D2</a></td><td> Proposals for non-allocated sites at strategic settlements, larger villages and medium villages</td></tr>
+    
+      <tr><td><a href="./valp-D-BUC043">valp-D-BUC043</a></td><td> Land west of AVDLP allocation BU1 Moreton Road, Buckingham</td></tr>
+    
+      <tr><td><a href="./valp-D-BUC051">valp-D-BUC051</a></td><td> West Buckingham, land bound by Brackley Road and the River Great Ouse</td></tr>
+    
+      <tr><td><a href="./valp-D-BUC046">valp-D-BUC046</a></td><td> Land off Osier Way (south of A421 and east of Gawcott Road)</td></tr>
+    
+      <tr><td><a href="./valp-D-HAD007">valp-D-HAD007</a></td><td> Land north of Rosemary Lane</td></tr>
+    
+      <tr><td><a href="./valp-D-HAL003">valp-D-HAL003</a></td><td> RAF Halton</td></tr>
+    
+      <tr><td><a href="./valp-D-WIN001">valp-D-WIN001</a></td><td> Land to east of B4033, Great Horwood Road</td></tr>
+    
+      <tr><td><a href="./valp-D-SCD003">valp-D-SCD003</a></td><td> Land at Queen Catherine Road</td></tr>
+    
+      <tr><td><a href="./valp-D-SCD008">valp-D-SCD008</a></td><td> Land at Molly’s Folly/Molly’s Field, west of Addison Road</td></tr>
+    
+      <tr><td><a href="./valp-D-STO008">valp-D-STO008</a></td><td> Land south of Creslow Way, Stone</td></tr>
+    
+      <tr><td><a href="./valp-D-WHI009">valp-D-WHI009</a></td><td> Holt’s Field, Whitchurch</td></tr>
+    
+      <tr><td><a href="./valp-D-CDN001">valp-D-CDN001</a></td><td> Land north of Aylesbury Road and rear of Great Stone House</td></tr>
+    
+      <tr><td><a href="./valp-D-CDN003">valp-D-CDN003</a></td><td> Dadbrook Farm</td></tr>
+    
+      <tr><td><a href="./valp-D-ICK004">valp-D-ICK004</a></td><td> Land off Turnfields</td></tr>
+    
+      <tr><td><a href="./valp-D-MMO006">valp-D-MMO006</a></td><td> Land east of Walnut Drive and west of Foscote Road</td></tr>
+    
+      <tr><td><a href="./valp-D-MGB003">valp-D-MGB003</a></td><td> Leopold Farm and area to the west</td></tr>
+    
+      <tr><td><a href="./valp-D-NLV005">valp-D-NLV005</a></td><td> Land south of Whaddon Road and west of Lower Rd, Newton Longville</td></tr>
+    
+      <tr><td><a href="./valp-D-QUA001">valp-D-QUA001</a></td><td> Land south west of 62 Station Road, Quainton</td></tr>
+    
+      <tr><td><a href="./valp-D-QUA0014-016">valp-D-QUA0014-016</a></td><td> Land adjacent to Station Road, Quainton</td></tr>
+    
+      <tr><td><a href="./valp-D3">valp-D3</a></td><td> Housing development at smaller villages</td></tr>
+    
+      <tr><td><a href="./valp-D4">valp-D4</a></td><td> Housing at other settlements</td></tr>
+    
+      <tr><td><a href="./valp-D5">valp-D5</a></td><td> Provision of employment land</td></tr>
+    
+      <tr><td><a href="./valp-D6">valp-D6</a></td><td> Town, village and local centres to support new and existing communities</td></tr>
+    
+      <tr><td><a href="./valp-D7">valp-D7</a></td><td> Town centre redevelopment</td></tr>
+    
+      <tr><td><a href="./valp-D8">valp-D8</a></td><td> Aylesbury town centre</td></tr>
+    
+      <tr><td><a href="./valp-D9">valp-D9</a></td><td> Housing in Aylesbury town centre</td></tr>
+    
+      <tr><td><a href="./valp-D10">valp-D10</a></td><td> Gypsy, Traveller and Travelling Showpeople sites</td></tr>
+    
+      <tr><td><a href="./valp-H1">valp-H1</a></td><td> Affordable housing</td></tr>
+    
+      <tr><td><a href="./valp-H2">valp-H2</a></td><td> Rural exception sites</td></tr>
+    
+      <tr><td><a href="./valp-H3">valp-H3</a></td><td> Rural workers dwellings</td></tr>
+    
+      <tr><td><a href="./valp-H4">valp-H4</a></td><td> Replacement dwellings in the countryside</td></tr>
+    
+      <tr><td><a href="./valp-H5">valp-H5</a></td><td> Self/custom build housing</td></tr>
+    
+      <tr><td><a href="./valp-H6">valp-H6</a></td><td> Housing mix</td></tr>
+    
+      <tr><td><a href="./valp-H7">valp-H7</a></td><td> Dwelling sizes</td></tr>
+    
+      <tr><td><a href="./valp-E1">valp-E1</a></td><td> Protection of key employment sites</td></tr>
+    
+      <tr><td><a href="./valp-E2">valp-E2</a></td><td> Other employment sites</td></tr>
+    
+      <tr><td><a href="./valp-E3">valp-E3</a></td><td> Ancillary uses on employment land</td></tr>
+    
+      <tr><td><a href="./valp-E4">valp-E4</a></td><td> Working at home</td></tr>
+    
+      <tr><td><a href="./valp-E5">valp-E5</a></td><td> Development outside town centres</td></tr>
+    
+      <tr><td><a href="./valp-E6">valp-E6</a></td><td> Shop and business frontages</td></tr>
+    
+      <tr><td><a href="./valp-E7">valp-E7</a></td><td> Tourism development</td></tr>
+    
+      <tr><td><a href="./valp-E8">valp-E8</a></td><td> Tourist accommodation</td></tr>
+    
+      <tr><td><a href="./valp-E9">valp-E9</a></td><td> Agricultural development</td></tr>
+    
+      <tr><td><a href="./valp-E10">valp-E10</a></td><td> Silverstone Circuit</td></tr>
+    
+      <tr><td><a href="./valp-T1">valp-T1</a></td><td> Delivering the sustainable transport vision</td></tr>
+    
+      <tr><td><a href="./valp-T2">valp-T2</a></td><td> Protected Transport Schemes</td></tr>
+    
+      <tr><td><a href="./valp-T3">valp-T3</a></td><td> Supporting transport schemes</td></tr>
+    
+      <tr><td><a href="./valp-T4">valp-T4</a></td><td> Delivering transport in new development</td></tr>
+    
+      <tr><td><a href="./valp-T5">valp-T5</a></td><td> Vehicle Parking</td></tr>
+    
+      <tr><td><a href="./valp-T6">valp-T6</a></td><td> Footpaths and cycle routes</td></tr>
+    
+      <tr><td><a href="./valp-T7">valp-T7</a></td><td> Electric vehicle infrastructure</td></tr>
+    
+      <tr><td><a href="./valp-BE1">valp-BE1</a></td><td> Heritage assets</td></tr>
+    
+      <tr><td><a href="./valp-BE2">valp-BE2</a></td><td> Design of new development</td></tr>
+    
+      <tr><td><a href="./valp-BE3">valp-BE3</a></td><td> Protection of the amenity of residents</td></tr>
+    
+      <tr><td><a href="./valp-BE4">valp-BE4</a></td><td> Density of new development</td></tr>
+    
+      <tr><td><a href="./valp-NE1">valp-NE1</a></td><td> Protected sites</td></tr>
+    
+      <tr><td><a href="./valp-NE2">valp-NE2</a></td><td> Biodiversity and geodiversity</td></tr>
+    
+      <tr><td><a href="./valp-NE3">valp-NE3</a></td><td> River and stream corridors</td></tr>
+    
+      <tr><td><a href="./valp-NE4">valp-NE4</a></td><td> The Chilterns AONB and setting</td></tr>
+    
+      <tr><td><a href="./valp-NE5">valp-NE5</a></td><td> Landscape character and locally important landscape</td></tr>
+    
+      <tr><td><a href="./valp-NE6">valp-NE6</a></td><td> Pollution, air quality and contaminated land</td></tr>
+    
+      <tr><td><a href="./valp-NE7">valp-NE7</a></td><td> Local green space</td></tr>
+    
+      <tr><td><a href="./valp-NE8">valp-NE8</a></td><td> Best and most versatile agricultural land</td></tr>
+    
+      <tr><td><a href="./valp-NE9">valp-NE9</a></td><td> Trees, hedgerows and woodlands</td></tr>
+    
+      <tr><td><a href="./valp-C1">valp-C1</a></td><td> Conversion of rural buildings</td></tr>
+    
+      <tr><td><a href="./valp-C2">valp-C2</a></td><td> Equestrian development</td></tr>
+    
+      <tr><td><a href="./valp-C3">valp-C3</a></td><td> Renewable Energy</td></tr>
+    
+      <tr><td><a href="./valp-C4">valp-C4</a></td><td> Protection of public rights of way</td></tr>
+    
+      <tr><td><a href="./valp-I1">valp-I1</a></td><td> Green infrastructure</td></tr>
+    
+      <tr><td><a href="./valp-I2">valp-I2</a></td><td> Sports and recreation</td></tr>
+    
+      <tr><td><a href="./valp-I3">valp-I3</a></td><td> Community facilities and assets of community value</td></tr>
+    
+      <tr><td><a href="./valp-I4">valp-I4</a></td><td> Flooding</td></tr>
+    
+      <tr><td><a href="./valp-I5">valp-I5</a></td><td> Water resources</td></tr>
+    
+      <tr><td><a href="./valp-I6">valp-I6</a></td><td> Telecommunications</td></tr>
+    
+      <tr><td><a href="./clp-GC1">clp-GC1</a></td><td> Design of Development Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC2">clp-GC2</a></td><td> Sunlighting and Daylighting Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC3">clp-GC3</a></td><td> Protection of Amenities Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC4">clp-GC4</a></td><td> Landscaping Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC7">clp-GC7</a></td><td> Noise-generating Developments Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC8">clp-GC8</a></td><td> Residential and Other Noise Sensitive Development in Areas of High Noise Level Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC9">clp-GC9</a></td><td> Prevention of Pollution Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC10">clp-GC10</a></td><td> Protection from Flooding in the Areas as Defined on the Proposals Map And Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC11">clp-GC11</a></td><td> Water Abstraction Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC12">clp-GC12</a></td><td> Protection of River Character - Rivers Chess & Misbourne</td></tr>
+    
+      <tr><td><a href="./clp-GC13">clp-GC13</a></td><td> Hazardous Substances Consent Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GC14">clp-GC14</a></td><td> Access for Disabled People to Developments Used by the Public Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-GB1">clp-GB1</a></td><td> Extent of the Green Belt in Chiltern District</td></tr>
+    
+      <tr><td><a href="./clp-GB2">clp-GB2</a></td><td> Development in General in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-GB4">clp-GB4</a></td><td> Residential Development in the Green Belt within Existing Rows of Dwellings As Defined in the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-GB5">clp-GB5</a></td><td> Residential Development in the Green Belt in Settlements As Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-GB6">clp-GB6</a></td><td> Rebuilding or Replacement of an Existing Habitable Dwelling Located in the Green Belt in the Areas Defined in Policies GB4 and GB5</td></tr>
+    
+      <tr><td><a href="./clp-GB7">clp-GB7</a></td><td> Rebuilding or Replacement of an Existing Habitable Dwelling in the Green Belt Outside the Areas Defined in Policies GB4 and GB5</td></tr>
+    
+      <tr><td><a href="./clp-GB8">clp-GB8</a></td><td> Rebuilding or Replacement of a Derelict Dwelling or Replacement of a Caravan with a Dwelling in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-GB10">clp-GB10</a></td><td> Re-Use of an Existing Habitable Dwelling in the Green Belt As More Than One Residential Unit (Class C3)</td></tr>
+    
+      <tr><td><a href="./clp-GB11">clp-GB11</a></td><td> Re-Use of Existing Non-Residential Buildings in the Green Belt For Residential Use (Class C3)</td></tr>
+    
+      <tr><td><a href="./clp-GB12">clp-GB12</a></td><td> Extensions to Existing Dwellings and Self-Contained Residential Annexes (for relatives or domestic staff) in the Green Belt within the Policy Areas Defined in Policies GB4 and GB5</td></tr>
+    
+      <tr><td><a href="./clp-GB13">clp-GB13</a></td><td> Extensions to Existing Dwellings and Self-Contained Residential Annexes (for relatives or domestic staff) in the Green Belt Outside the Areas Defined in Policies GB4 and GB5</td></tr>
+    
+      <tr><td><a href="./clp-GB15">clp-GB15</a></td><td> Ancillary Residential Buildings Within the Curtilage of an Existing Habitable Dwelling in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-GB16">clp-GB16</a></td><td> Extension of Residential Curtilages in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-GB17">clp-GB17</a></td><td> Agricultural Workers Dwellings in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-GB20">clp-GB20</a></td><td> Retention of a Dwelling in the Green Belt without Compliance with an Agricultural Occupancy Condition</td></tr>
+    
+      <tr><td><a href="./clp-GB22A">clp-GB22A</a></td><td> Business, General Industrial and Storage or Distribution Development In the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-GB23">clp-GB23</a></td><td> Limited Infilling Including Local Community Facilities in the Green Belt In the Areas Defined in Policies GB4 and GB5, except Development covered by Policies GB4, GB5, GB6, GB12 and GB15</td></tr>
+    
+      <tr><td><a href="./clp-GB24">clp-GB24</a></td><td> Redevelopment or Change of Use of Buildings Used for the Provision of Local Community Facilities in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-GB27">clp-GB27</a></td><td> New Agricultural Buildings, Extensions and Alterations to Existing Agricultural Buildings in the Green Belt, except Dwellings for Agricultural Workers</td></tr>
+    
+      <tr><td><a href="./clp-GB29">clp-GB29</a></td><td> Re-Use of Buildings in the Green Belt for Commercial, Industrial, Recreational and Other Uses, except Residential Uses Covered by Policies GB10 and GB11</td></tr>
+    
+      <tr><td><a href="./clp-GB30">clp-GB30</a></td><td> Conservation and Enhancement of Rural Landscape in parts of The Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-LSQ1">clp-LSQ1</a></td><td> Chilterns Area of Outstanding Natural Beauty as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-H2">clp-H2</a></td><td> Identified Housing Sites as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-H3">clp-H3</a></td><td> Provision of New Dwellings in the Built-Up Areas Excluded from the Green Belt (Other than in accordance with Policies H2, H4 & H7)</td></tr>
+    
+      <tr><td><a href="./clp-H4">clp-H4</a></td><td> Provision of New Dwellings in Established Residential Areas of Special Character As Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-H7">clp-H7</a></td><td> Conversion of a Dwelling into More than One Residential Unit in the Built-Up Areas Excluded from the Green Belt and Policy GB4 and GB5 Areas in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-H9">clp-H9</a></td><td> Loss of Existing Dwellings and Land in Residential Use Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-H11">clp-H11</a></td><td> Distance Between Flank Elevation(s) of a Proposed Multi-Storey Dwelling and Boundary of Dwelling's Curtilage Throughout The District</td></tr>
+    
+      <tr><td><a href="./clp-H12">clp-H12</a></td><td> Private Residential Garden Areas Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-H13">clp-H13</a></td><td> Extensions to Dwellings In the Built-Up Areas Excluded From the Green Belt and in Policy GB4 and GB5 Areas in the Green Belt - General Policy</td></tr>
+    
+      <tr><td><a href="./clp-H14">clp-H14</a></td><td> Safeguarding the Amenities of Neighbours in Relation to Extensions Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-H15">clp-H15</a></td><td> Design and Siting of Extensions Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-H16">clp-H16</a></td><td> Distance Between Multi-Storey or Upper Floor Side And/Or Rear Extensions and Boundary of Dwelling Curtilage Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-H17">clp-H17</a></td><td> Distance Between Single Storey Side Extensions and Boundary of Dwelling Curtilage Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-H18">clp-H18</a></td><td> Dormer Windows on Dwellings Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-H19">clp-H19</a></td><td> Self-Contained Residential Annexes (for relatives or domestic staff) in the Built-Up Areas Excluded from the Green Belt and in the Policy GB4 and GB5 Areas in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-H20">clp-H20</a></td><td> Ancillary Residential Buildings (domestic garages, workshops, etc) In the Built-Up Areas Excluded From the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-H21">clp-H21</a></td><td> Stationing and Occupation of a Caravan Within the Curtilage of a Dwellinghouse Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-S1">clp-S1</a></td><td> Locations For Shopping Development Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-S2">clp-S2</a></td><td> Chesham, Amersham-on-the-Hill and Chalfont St Peter District Centres as Defined on the Proposals Map - Additional Shopping Floorspace</td></tr>
+    
+      <tr><td><a href="./clp-S3">clp-S3</a></td><td> The Local Centres as Defined on the Proposals Map Additional Shopping Floorspace</td></tr>
+    
+      <tr><td><a href="./clp-S4">clp-S4</a></td><td> Change of Use to Class A1 Shop - Ground Floors - All Centres as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-S5-CH">clp-S5-CH</a></td><td> Chesham District Shopping Centre: - Principal Shopping Frontages And Other Shopping Frontages As Defined On The Proposals Map - Changes Of Use To, or Between, Non - Class A1 Shop Uses On Ground Floors</td></tr>
+    
+      <tr><td><a href="./clp-S5-AH">clp-S5-AH</a></td><td> Shopping Frontages in the District Shopping Centre of Amersham-on-the-Hill as Defined on the Proposals Map - Changes of Use To, or Between, Non Class A1 Shop Uses on Ground Floors</td></tr>
+    
+      <tr><td><a href="./clp-S5-CSP">clp-S5-CSP</a></td><td> Chalfont St Peter District Shopping Centre: - Principal Shopping Frontages And Other Shopping Frontages As Defined On The Proposals Map - Changes Of Use To, or Between, Non - Class A1 Shop Uses On Ground Floors</td></tr>
+    
+      <tr><td><a href="./clp-S7">clp-S7</a></td><td> Shopping Frontages in the Local Shopping Centres as Defined on the Proposals Map - Changes of Use To, or Between, Non - Class A1 Shop Uses on Ground Floors</td></tr>
+    
+      <tr><td><a href="./clp-S9">clp-S9</a></td><td> Uses on Upper Floors in District and Local Shopping Centres as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-S10">clp-S10</a></td><td> Residential Uses on Ground Floors in the Local Shopping Centres of Amersham Old Town, and Chalfont St Giles 192c as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-S10A">clp-S10A</a></td><td> Changes of Use on Ground and Upper Floors in High Street, Great Missenden as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-S11">clp-S11</a></td><td> Shop Fronts Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-S12">clp-S12</a></td><td> Rear Servicing in Chesham and Amersham-on-the-Hill District Shopping Centres as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-S13">clp-S13</a></td><td> Small Scale Shopping Developments Outside District and Local Centres in Built-up Areas Excluded From the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-S14">clp-S14</a></td><td> Other Shopping Developments Outside District and Local Centres in Built-up Areas Excluded From the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-TR2">clp-TR2</a></td><td> Highway Aspects of Planning Applications Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TR3">clp-TR3</a></td><td> Access and Road Layout Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TR6">clp-TR6</a></td><td> Extension of Sycamore Road Car Park, Amersham</td></tr>
+    
+      <tr><td><a href="./clp-TR9">clp-TR9</a></td><td> Land North-West of Water Meadow Car Park, Chesham</td></tr>
+    
+      <tr><td><a href="./clp-TR11">clp-TR11</a></td><td> Provision of Off-Street Parking for Developments Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TR12">clp-TR12</a></td><td> Relaxation of Parking Standards Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TR14">clp-TR14</a></td><td> Retention of Existing Areas of Off-Street Vehicle Parking Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TR15">clp-TR15</a></td><td> Design of Parking Areas Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TR16">clp-TR16</a></td><td> Parking and Manoeuvring Standards Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-R2">clp-R2</a></td><td> Loss of Existing Sports Facilities Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-R3">clp-R3</a></td><td> Indoor Sports Facilities in the Built-up Areas excluded from the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-R4">clp-R4</a></td><td> Indoor Sports Facilities in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-R6">clp-R6</a></td><td> Floodlighting of Sports Facilities Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-R7">clp-R7</a></td><td> Loss of Public Amenity Open Space and Common Land as defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-R8">clp-R8</a></td><td> Retention of Existing Character and Appearance of Public Amenity Open Space and Common Land as defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-R10">clp-R10</a></td><td> Loss of Other Amenity Open Space (not open to the general public) as defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-R11">clp-R11</a></td><td> Land to the South East of Chesham Moor : Water Based Recreation</td></tr>
+    
+      <tr><td><a href="./clp-R12">clp-R12</a></td><td> Loss of Allotments Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-R13">clp-R13</a></td><td> Horse Riding and Equestrian Activities Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-R16">clp-R16</a></td><td> Golf Courses and Golf Driving Ranges Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-T2">clp-T2</a></td><td> Hotels and Guest Houses in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-T4">clp-T4</a></td><td> Sites for Touring Holiday Caravans and Touring Holiday Tents in the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-CSF1">clp-CSF1</a></td><td> Provision of Community Services and Facilities in the Built-up Areas Excluded from the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-CSF2">clp-CSF2</a></td><td> Loss of Community Services and Facilities in the Built-up Areas Excluded from the Green Belt</td></tr>
+    
+      <tr><td><a href="./clp-AS1">clp-AS1</a></td><td> Scheduled Monuments and Other Nationally Important Unscheduled Archaeological Remains Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-AS2">clp-AS2</a></td><td> Other Unscheduled Archaeological Remains Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-LB1">clp-LB1</a></td><td> Protection of Special Architectural or Historic Interest of Listed Buildings Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-LB2">clp-LB2</a></td><td> Protection of Setting of Listed Buildings Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-LB3">clp-LB3</a></td><td> Demolition of Listed Buildings Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-LB4">clp-LB4</a></td><td> Change of Use of Listed Buildings Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-CA1">clp-CA1</a></td><td> Works to Buildings in Conservation Areas as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-CA2">clp-CA2</a></td><td> Views Within, out of, or into the Conservation Areas as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-CA3">clp-CA3</a></td><td> Changes of Use in Conservation Areas as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-CA4">clp-CA4</a></td><td> Demolition of Unlisted Buildings in Conservation Areas as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-CA5">clp-CA5</a></td><td> Trees in Conservation Areas as Defined on the Proposals Map</td></tr>
+    
+      <tr><td><a href="./clp-TW2">clp-TW2</a></td><td> Consent for Works to Trees Covered By A Tree Preservation Order Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TW3">clp-TW3</a></td><td> Resistance to Loss of Trees Covered By A Tree Preservation Order Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TW6">clp-TW6</a></td><td> Resistance to Loss of Woodland Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-NC1">clp-NC1</a></td><td> Safeguarding of Nature Conservation Interests Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-NC3">clp-NC3</a></td><td> Local Nature Reserve; Weirhouse Mill, Chesham</td></tr>
+    
+      <tr><td><a href="./clp-A2">clp-A2</a></td><td> Illuminated Non-Projecting Advertisements Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-A3">clp-A3</a></td><td> Illuminated Projecting Advertisements Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TD1">clp-TD1</a></td><td> Network Developments Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-TD2">clp-TD2</a></td><td> Other Telecommunications Development Throughout the District</td></tr>
+    
+      <tr><td><a href="./clp-OEL1">clp-OEL1</a></td><td> Low Voltage Overhead Electricity Lines Throughout the District</td></tr>
+    
+      <tr><td><a href="./ccs-CS1">ccs-CS1</a></td><td> The Spatial Strategy</td></tr>
+    
+      <tr><td><a href="./ccs-CS2">ccs-CS2</a></td><td> Amount and Distribution of Residential Development 2006-2026</td></tr>
+    
+      <tr><td><a href="./ccs-CS3">ccs-CS3</a></td><td> Amount and Distribution of Non-Residential Development 2006-2026</td></tr>
+    
+      <tr><td><a href="./ccs-CS4">ccs-CS4</a></td><td> Ensuring that Development Is Sustainable</td></tr>
+    
+      <tr><td><a href="./ccs-CS5">ccs-CS5</a></td><td> Encouraging Renewable Energy Schemes</td></tr>
+    
+      <tr><td><a href="./ccs-CS6">ccs-CS6</a></td><td> Strategic Housing Allocations</td></tr>
+    
+      <tr><td><a href="./ccs-CS7">ccs-CS7</a></td><td> Major Developed Sites Within The Green Belt Allocated For Housing</td></tr>
+    
+      <tr><td><a href="./ccs-CS8">ccs-CS8</a></td><td> Affordable Housing Policy</td></tr>
+    
+      <tr><td><a href="./ccs-CS9">ccs-CS9</a></td><td> Affordable Housing in Rural Areas</td></tr>
+    
+      <tr><td><a href="./ccs-CS10">ccs-CS10</a></td><td> Affordable Housing Type</td></tr>
+    
+      <tr><td><a href="./ccs-CS11">ccs-CS11</a></td><td> Affordable Housing Size</td></tr>
+    
+      <tr><td><a href="./ccs-CS12">ccs-CS12</a></td><td> Specialist Housing</td></tr>
+    
+      <tr><td><a href="./ccs-CS13">ccs-CS13</a></td><td> Major Developed Sites Within The Green Belt At The National Society For Epilepsy, Chalfont St Peter</td></tr>
+    
+      <tr><td><a href="./ccs-CS14">ccs-CS14</a></td><td> Sites for Gypsies and Travellers And Sites for Travelling Showpeople</td></tr>
+    
+      <tr><td><a href="./ccs-CS15">ccs-CS15</a></td><td> Smart Growth</td></tr>
+    
+      <tr><td><a href="./ccs-CS16">ccs-CS16</a></td><td> Employment Land</td></tr>
+    
+      <tr><td><a href="./ccs-CS17">ccs-CS17</a></td><td> Major Developed Site Within The Green Belt At Chalfont Grove, Chalfont St Peter</td></tr>
+    
+      <tr><td><a href="./ccs-CS18">ccs-CS18</a></td><td> Development Within District Shopping Centres</td></tr>
+    
+      <tr><td><a href="./ccs-CS19">ccs-CS19</a></td><td> Supporting The Rural Economy</td></tr>
+    
+      <tr><td><a href="./ccs-CS20">ccs-CS20</a></td><td> Design And Environmental Quality</td></tr>
+    
+      <tr><td><a href="./ccs-CS21">ccs-CS21</a></td><td> Areas Of Little Change</td></tr>
+    
+      <tr><td><a href="./ccs-CS22">ccs-CS22</a></td><td> Chilterns Area of Outstanding Natural Beauty</td></tr>
+    
+      <tr><td><a href="./ccs-CS23">ccs-CS23</a></td><td> Review of the Boundaries of Identified Settlements and Rows of Dwellings Within the Green Belt</td></tr>
+    
+      <tr><td><a href="./ccs-CS24">ccs-CS24</a></td><td> Biodiversity</td></tr>
+    
+      <tr><td><a href="./ccs-CS25">ccs-CS25</a></td><td> Dealing with the Impact of New Development on the Transport Network</td></tr>
+    
+      <tr><td><a href="./ccs-CS26">ccs-CS26</a></td><td> Requirements of New Development</td></tr>
+    
+      <tr><td><a href="./ccs-CS27">ccs-CS27</a></td><td> Working for a Healthier Community</td></tr>
+    
+      <tr><td><a href="./ccs-CS28">ccs-CS28</a></td><td> Retaining and Improving Leisure and Recreational Facilities</td></tr>
+    
+      <tr><td><a href="./ccs-CS29">ccs-CS29</a></td><td> Community</td></tr>
+    
+      <tr><td><a href="./ccs-CS30">ccs-CS30</a></td><td> Reducing Crime and the Fear of Crime</td></tr>
+    
+      <tr><td><a href="./ccs-CS31">ccs-CS31</a></td><td> Infrastructure</td></tr>
+    
+      <tr><td><a href="./ccs-CS32">ccs-CS32</a></td><td> Green Infrastructure</td></tr>
+    
+      <tr><td><a href="./sblp-GB1">sblp-GB1</a></td><td> Green Belt Boundaries and the Control over Development in the Green Belt</td></tr>
+    
+      <tr><td><a href="./sblp-GB2">sblp-GB2</a></td><td> Re-use of Buildings in the Green Belt</td></tr>
+    
+      <tr><td><a href="./sblp-GB3">sblp-GB3</a></td><td> Residential Infilling in Green Belt Settlements</td></tr>
+    
+      <tr><td><a href="./sblp-GB4">sblp-GB4</a></td><td> Employment Generating and Commercial Development in the Green Belt (excluding Green Belt settlements)</td></tr>
+    
+      <tr><td><a href="./sblp-GB5">sblp-GB5</a></td><td> Employment Generating and Commercial Development in Green Belt Settlements</td></tr>
+    
+      <tr><td><a href="./sblp-GB7">sblp-GB7</a></td><td> Removal of Agricultural Occupancy Conditions</td></tr>
+    
+      <tr><td><a href="./sblp-GB9">sblp-GB9</a></td><td> Agricultural diversification</td></tr>
+    
+      <tr><td><a href="./sblp-GB10">sblp-GB10</a></td><td> Extensions to Dwellings in the Green Belt</td></tr>
+    
+      <tr><td><a href="./sblp-GB11">sblp-GB11</a></td><td> Rebuilding of Dwellings in the Green Belt</td></tr>
+    
+      <tr><td><a href="./sblp-GB13">sblp-GB13</a></td><td> Extensions of Residential Curtilages in the Green Belt</td></tr>
+    
+      <tr><td><a href="./sblp-L4">sblp-L4</a></td><td> River Thames Setting</td></tr>
+    
+      <tr><td><a href="./sblp-L10">sblp-L10</a></td><td> Proposals Involving Felling or other Works affecting Trees Covered By a Tree Preservation Order</td></tr>
+    
+      <tr><td><a href="./sblp-C1">sblp-C1</a></td><td> Development within a Conservation Area</td></tr>
+    
+      <tr><td><a href="./sblp-C6">sblp-C6</a></td><td> Alterations and Extensions to Listed Buildings</td></tr>
+    
+      <tr><td><a href="./sblp-C15">sblp-C15</a></td><td> Sites of Geological Importance</td></tr>
+    
+      <tr><td><a href="./sblp-EP3">sblp-EP3</a></td><td> The Use, Design and Layout of Development</td></tr>
+    
+      <tr><td><a href="./sblp-EP4">sblp-EP4</a></td><td> Landscaping</td></tr>
+    
+      <tr><td><a href="./sblp-EP5">sblp-EP5</a></td><td> Sunlight and Daylight</td></tr>
+    
+      <tr><td><a href="./sblp-EP6">sblp-EP6</a></td><td> Designing to Reduce Crime</td></tr>
+    
+      <tr><td><a href="./sblp-EP7">sblp-EP7</a></td><td> Signs and Advertisements</td></tr>
+    
+      <tr><td><a href="./sblp-EP16">sblp-EP16</a></td><td> Hazardous Substances</td></tr>
+    
+      <tr><td><a href="./sblp-EP17">sblp-EP17</a></td><td> Aerodrome/Air Traffic Safeguarding</td></tr>
+    
+      <tr><td><a href="./sblp-EP18">sblp-EP18</a></td><td> Telecommunications Development</td></tr>
+    
+      <tr><td><a href="./sblp-R5">sblp-R5</a></td><td> Horse Related Facilities</td></tr>
+    
+      <tr><td><a href="./sblp-R6">sblp-R6</a></td><td> Specialist Sports</td></tr>
+    
+      <tr><td><a href="./sblp-R8">sblp-R8</a></td><td> Floodlighting</td></tr>
+    
+      <tr><td><a href="./sblp-R9">sblp-R9</a></td><td> Golf Courses</td></tr>
+    
+      <tr><td><a href="./sblp-R10">sblp-R10</a></td><td> Golf Driving Ranges</td></tr>
+    
+      <tr><td><a href="./sblp-H2">sblp-H2</a></td><td> New Housing Allocations</td></tr>
+    
+      <tr><td><a href="./sblp-H6">sblp-H6</a></td><td> Specialist Residential Accommodation</td></tr>
+    
+      <tr><td><a href="./sblp-H9">sblp-H9</a></td><td> Residential Layout and Design</td></tr>
+    
+      <tr><td><a href="./sblp-H10">sblp-H10</a></td><td> Residential Areas of Exceptional Character</td></tr>
+    
+      <tr><td><a href="./sblp-H11">sblp-H11</a></td><td> Alterations and Extensions to Dwellings</td></tr>
+    
+      <tr><td><a href="./sblp-H12">sblp-H12</a></td><td> Self-contained Residential Annexe to Provide Ancillary Accommodation</td></tr>
+    
+      <tr><td><a href="./sblp-H13">sblp-H13</a></td><td> Ancillary Buildings within Residential Curtilage</td></tr>
+    
+      <tr><td><a href="./sblp-TC1">sblp-TC1</a></td><td> Development in Beaconsfield (New Town), Burnham, and Gerrards Cross</td></tr>
+    
+      <tr><td><a href="./sblp-S1">sblp-S1</a></td><td> District Shopping Centres</td></tr>
+    
+      <tr><td><a href="./sblp-S2">sblp-S2</a></td><td> Local Shopping Centres</td></tr>
+    
+      <tr><td><a href="./sblp-S3">sblp-S3</a></td><td> Neighbourhood Shops</td></tr>
+    
+      <tr><td><a href="./sblp-S4">sblp-S4</a></td><td> Individual Shops</td></tr>
+    
+      <tr><td><a href="./sblp-S6">sblp-S6</a></td><td> Out-of-Centre Shopping Development</td></tr>
+    
+      <tr><td><a href="./sblp-S9">sblp-S9</a></td><td> Markets, Car-boot Sales, etc</td></tr>
+    
+      <tr><td><a href="./sblp-E2">sblp-E2</a></td><td> Pinewood Studios</td></tr>
+    
+      <tr><td><a href="./sblp-TR4">sblp-TR4</a></td><td> Provision for those with Special Needs</td></tr>
+    
+      <tr><td><a href="./sblp-TR5">sblp-TR5</a></td><td> Accesses, Highway Works and Traffic Generation</td></tr>
+    
+      <tr><td><a href="./sblp-TR7">sblp-TR7</a></td><td> Parking Provision</td></tr>
+    
+      <tr><td><a href="./sblp-TR10">sblp-TR10</a></td><td> Heavy Goods Vehicles</td></tr>
+    
+      <tr><td><a href="./sblp-TR12">sblp-TR12</a></td><td> West Drayton to Poyle Railway Line</td></tr>
+    
+      <tr><td><a href="./sblp-TR13">sblp-TR13</a></td><td> Freight Facilities</td></tr>
+    
+      <tr><td><a href="./sblp-COM1">sblp-COM1</a></td><td> Provision of Community Facilities</td></tr>
+    
+      <tr><td><a href="./sblp-COM2">sblp-COM2</a></td><td> Loss of Community Facilities</td></tr>
+    
+      <tr><td><a href="./sbcs-CP1">sbcs-CP1</a></td><td> Housing Provision and Delivery</td></tr>
+    
+      <tr><td><a href="./sbcs-CP2">sbcs-CP2</a></td><td> Housing Type and Size</td></tr>
+    
+      <tr><td><a href="./sbcs-CP3">sbcs-CP3</a></td><td> Affordable Housing</td></tr>
+    
+      <tr><td><a href="./sbcs-CP4">sbcs-CP4</a></td><td> Gypsies, Travellers and Travelling Show People</td></tr>
+    
+      <tr><td><a href="./sbcs-CP5">sbcs-CP5</a></td><td> Open Space, Sport and Recreation</td></tr>
+    
+      <tr><td><a href="./sbcs-CP6">sbcs-CP6</a></td><td> Local Infrastructure Needs</td></tr>
+    
+      <tr><td><a href="./sbcs-CP7">sbcs-CP7</a></td><td> Accessibility and Transport</td></tr>
+    
+      <tr><td><a href="./sbcs-CP8">sbcs-CP8</a></td><td> Built And Historic Environment</td></tr>
+    
+      <tr><td><a href="./sbcs-CP9">sbcs-CP9</a></td><td> Natural Environment</td></tr>
+    
+      <tr><td><a href="./sbcs-CP10">sbcs-CP10</a></td><td> Employment</td></tr>
+    
+      <tr><td><a href="./sbcs-CP11">sbcs-CP11</a></td><td> Healthy and Viable Town and Village Centres</td></tr>
+    
+      <tr><td><a href="./sbcs-CP12">sbcs-CP12</a></td><td> Sustainable Energy</td></tr>
+    
+      <tr><td><a href="./sbcs-CP13">sbcs-CP13</a></td><td> Environmental and Resource Management</td></tr>
+    
+      <tr><td><a href="./sbcs-CP14">sbcs-CP14</a></td><td> Wilton Park (Opportunity Site)</td></tr>
+    
+      <tr><td><a href="./sbcs-CP15">sbcs-CP15</a></td><td> Mill Lane (Opportunity Site)</td></tr>
+    
+      <tr><td><a href="./sbcs-CP16">sbcs-CP16</a></td><td> South Of Iver (Opportunity Area)</td></tr>
+    
+      <tr><td><a href="./sbcs-CP17">sbcs-CP17</a></td><td> Other Development Sites</td></tr>
+    
+      <tr><td><a href="./wdlp-CP1">wdlp-CP1</a></td><td> Sustainable Development</td></tr>
+    
+      <tr><td><a href="./wdlp-CP2">wdlp-CP2</a></td><td> Overall Spatial Strategy</td></tr>
+    
+      <tr><td><a href="./wdlp-CP3">wdlp-CP3</a></td><td> Settlement Strategy</td></tr>
+    
+      <tr><td><a href="./wdlp-CP4">wdlp-CP4</a></td><td> Delivering Homes</td></tr>
+    
+      <tr><td><a href="./wdlp-CP5">wdlp-CP5</a></td><td> Delivering Land for Business</td></tr>
+    
+      <tr><td><a href="./wdlp-CP6">wdlp-CP6</a></td><td> Securing Vibrant and High Quality Town Centres</td></tr>
+    
+      <tr><td><a href="./wdlp-CP7">wdlp-CP7</a></td><td> Delivering the Infrastructure to Support Growth</td></tr>
+    
+      <tr><td><a href="./wdlp-CP8">wdlp-CP8</a></td><td> Protecting the Green Belt</td></tr>
+    
+      <tr><td><a href="./wdlp-CP9">wdlp-CP9</a></td><td> Sense of Place</td></tr>
+    
+      <tr><td><a href="./wdlp-CP10">wdlp-CP10</a></td><td> Green Infrastructure and the Natural Environment</td></tr>
+    
+      <tr><td><a href="./wdlp-CP11">wdlp-CP11</a></td><td> Historic Environment</td></tr>
+    
+      <tr><td><a href="./wdlp-CP12">wdlp-CP12</a></td><td> Climate Change</td></tr>
+    
+      <tr><td><a href="./wdlp-HW4">wdlp-HW4</a></td><td> Abbey Barn North</td></tr>
+    
+      <tr><td><a href="./wdlp-HW5">wdlp-HW5</a></td><td> Abbey Barn South and Wycombe Summit, High Wycombe</td></tr>
+    
+      <tr><td><a href="./wdlp-HW6">wdlp-HW6</a></td><td> Gomm Valley and Ashwells, High Wycombe</td></tr>
+    
+      <tr><td><a href="./wdlp-HW7">wdlp-HW7</a></td><td> Terriers Farm and Terriers House</td></tr>
+    
+      <tr><td><a href="./wdlp-HW8">wdlp-HW8</a></td><td> Land off Amersham Road including Tralee Farm, Hazlemere</td></tr>
+    
+      <tr><td><a href="./wdlp-HW9">wdlp-HW9</a></td><td> Part of Greens Farm, Glynswood, Green Hill, High Wycombe</td></tr>
+    
+      <tr><td><a href="./wdlp-HW10">wdlp-HW10</a></td><td> Horns Lane, Booker, High Wycombe</td></tr>
+    
+      <tr><td><a href="./wdlp-HW11">wdlp-HW11</a></td><td> Clay Lane, Booker, High Wycombe</td></tr>
+    
+      <tr><td><a href="./wdlp-HW12">wdlp-HW12</a></td><td> Leigh Street, Desborough area, High Wycombe</td></tr>
+    
+      <tr><td><a href="./wdlp-HW13">wdlp-HW13</a></td><td> Former Bassetsbury Allotments, Bassetsbury Lane</td></tr>
+    
+      <tr><td><a href="./wdlp-HW14">wdlp-HW14</a></td><td> Highbury Works / Hazlemere Coachworks, Chestnut Lane, Hazlemere</td></tr>
+    
+      <tr><td><a href="./wdlp-HW15">wdlp-HW15</a></td><td> Wycombe Air Park</td></tr>
+    
+      <tr><td><a href="./wdlp-HW16">wdlp-HW16</a></td><td> Land Adjoning High Heavens Recycling Centre, off Clay Lane</td></tr>
+    
+      <tr><td><a href="./wdlp-HW17">wdlp-HW17</a></td><td> Cressex Business Park</td></tr>
+    
+      <tr><td><a href="./wdlp-HW18">wdlp-HW18</a></td><td> Office Outlet site, Queen Alexandra Road, High Wycombe</td></tr>
+    
+      <tr><td><a href="./wdlp-HW19">wdlp-HW19</a></td><td> High Wycombe Town Centre - former Local Development Order area</td></tr>
+    
+      <tr><td><a href="./wdlp-HW20">wdlp-HW20</a></td><td> Land at Queensway, Hazlemere</td></tr>
+    
+      <tr><td><a href="./wdlp-MR6">wdlp-MR6</a></td><td> Seymour Court Road, Marlow</td></tr>
+    
+      <tr><td><a href="./wdlp-MR7">wdlp-MR7</a></td><td> Globe Park, Marlow</td></tr>
+    
+      <tr><td><a href="./wdlp-PR3">wdlp-PR3</a></td><td> Princes Risborough Area of Comprehensive Development including Relief Road</td></tr>
+    
+      <tr><td><a href="./wdlp-PR4">wdlp-PR4</a></td><td> The Main Expansion Area Development Framework</td></tr>
+    
+      <tr><td><a href="./wdlp-PR5">wdlp-PR5</a></td><td> Settlement Boundary and Strategic Buffer</td></tr>
+    
+      <tr><td><a href="./wdlp-PR6">wdlp-PR6</a></td><td> Main expansion area and development principles</td></tr>
+    
+      <tr><td><a href="./wdlp-PR7">wdlp-PR7</a></td><td> Development requirements</td></tr>
+    
+      <tr><td><a href="./wdlp-PR8">wdlp-PR8</a></td><td> Provision and Safeguarding of Transport Infrastructure</td></tr>
+    
+      <tr><td><a href="./wdlp-PR9">wdlp-PR9</a></td><td> Princes Estate Expansion</td></tr>
+    
+      <tr><td><a href="./wdlp-PR10">wdlp-PR10</a></td><td> Land North of Lower Icknield Way</td></tr>
+    
+      <tr><td><a href="./wdlp-PR11">wdlp-PR11</a></td><td> Land to the Rear of Poppy Road</td></tr>
+    
+      <tr><td><a href="./wdlp-PR12">wdlp-PR12</a></td><td> Town centre Traffic and public realm enhancements</td></tr>
+    
+      <tr><td><a href="./wdlp-PR13">wdlp-PR13</a></td><td> Town Centre site: Land fronting New Road (Back Lane)</td></tr>
+    
+      <tr><td><a href="./wdlp-PR14">wdlp-PR14</a></td><td> Town Centre site: Land south of Horns Lane</td></tr>
+    
+      <tr><td><a href="./wdlp-PR15">wdlp-PR15</a></td><td> Molins Sports Ground</td></tr>
+    
+      <tr><td><a href="./wdlp-PR16">wdlp-PR16</a></td><td> Land at Princes Risborough Station</td></tr>
+    
+      <tr><td><a href="./wdlp-PR17">wdlp-PR17</a></td><td> Princes Risborough Delivery of Infrastructure</td></tr>
+    
+      <tr><td><a href="./wdlp-BE1">wdlp-BE1</a></td><td> Slate Meadow</td></tr>
+    
+      <tr><td><a href="./wdlp-BE2">wdlp-BE2</a></td><td> Hollands Farm</td></tr>
+    
+      <tr><td><a href="./wdlp-BE3">wdlp-BE3</a></td><td> Health Facilities in Bourne End and Wooburn</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR1">wdlp-RUR1</a></td><td> Land South of Finings Road, Lane End</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR2">wdlp-RUR2</a></td><td> Land between Chalky Field and Marlow Road, Lane End</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR3">wdlp-RUR3</a></td><td> Land at Sidney House, Lane End</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR4">wdlp-RUR4</a></td><td> Little Marlow Lakes Country Park</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR5">wdlp-RUR5</a></td><td> Longwick-cum-Ilmer Parish</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR6">wdlp-RUR6</a></td><td> Great and Little Kimble-cum-Marsh Parish</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR7">wdlp-RUR7</a></td><td> Land off Clappins Lane, Naphill</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR8">wdlp-RUR8</a></td><td> Land south of Mill Road, Stokenchurch</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR9">wdlp-RUR9</a></td><td> Land at Wood Farm, Stokenchurch</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR10">wdlp-RUR10</a></td><td> Land to the rear of Stokenchurch Business Park</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR11">wdlp-RUR11</a></td><td> Land at Heavens Above, 16 High Heavens, Marlow Bottom</td></tr>
+    
+      <tr><td><a href="./wdlp-RUR12">wdlp-RUR12</a></td><td> Uplands Conference Centre, Four Ashes</td></tr>
+    
+      <tr><td><a href="./wdlp-DM20">wdlp-DM20</a></td><td> Matters to be determined in accordance with the national planning policy framework</td></tr>
+    
+      <tr><td><a href="./wdlp-DM21">wdlp-DM21</a></td><td> The location of new housing</td></tr>
+    
+      <tr><td><a href="./wdlp-DM22">wdlp-DM22</a></td><td> Housing mix</td></tr>
+    
+      <tr><td><a href="./wdlp-DM23">wdlp-DM23</a></td><td> Other residential uses</td></tr>
+    
+      <tr><td><a href="./wdlp-DM24">wdlp-DM24</a></td><td> Affordable housing</td></tr>
+    
+      <tr><td><a href="./wdlp-DM25">wdlp-DM25</a></td><td> Rural exceptions Affordable Housing</td></tr>
+    
+      <tr><td><a href="./wdlp-DM26">wdlp-DM26</a></td><td> Criteria for Traveller Sites</td></tr>
+    
+      <tr><td><a href="./wdlp-DM27">wdlp-DM27</a></td><td> Housing for Rural Workers</td></tr>
+    
+      <tr><td><a href="./wdlp-DM28">wdlp-DM28</a></td><td> Employment Areas</td></tr>
+    
+      <tr><td><a href="./wdlp-DM29">wdlp-DM29</a></td><td> Community facilities</td></tr>
+    
+      <tr><td><a href="./wdlp-DM30">wdlp-DM30</a></td><td> The Chilterns Area of Outstanding Natural Beauty</td></tr>
+    
+      <tr><td><a href="./wdlp-DM31">wdlp-DM31</a></td><td> Development affecting the Historic Environment</td></tr>
+    
+      <tr><td><a href="./wdlp-DM32">wdlp-DM32</a></td><td> Landscape Character and Settlement Patterns</td></tr>
+    
+      <tr><td><a href="./wdlp-DM33">wdlp-DM33</a></td><td> Managing Carbon Emissions: Transport and Energy Generation</td></tr>
+    
+      <tr><td><a href="./wdlp-DM34">wdlp-DM34</a></td><td> Delivering Green Infrastructure and Biodiversity in Development</td></tr>
+    
+      <tr><td><a href="./wdlp-DM35">wdlp-DM35</a></td><td> Placemaking and design quality</td></tr>
+    
+      <tr><td><a href="./wdlp-DM36">wdlp-DM36</a></td><td> Extensions and alterations to existing dwellings</td></tr>
+    
+      <tr><td><a href="./wdlp-DM37">wdlp-DM37</a></td><td> Small scale non-residential development</td></tr>
+    
+      <tr><td><a href="./wdlp-DM38">wdlp-DM38</a></td><td> Water quality and supply</td></tr>
+    
+      <tr><td><a href="./wdlp-DM39">wdlp-DM39</a></td><td> Managing flood risk and sustainable drainage systems</td></tr>
+    
+      <tr><td><a href="./wdlp-DM40">wdlp-DM40</a></td><td> Internal space standards</td></tr>
+    
+      <tr><td><a href="./wdlp-DM41">wdlp-DM41</a></td><td> Optional Technical Standards for Building Regulations Approval</td></tr>
+    
+      <tr><td><a href="./wdlp-DM42">wdlp-DM42</a></td><td> Managing development in the Green Belt</td></tr>
+    
+      <tr><td><a href="./wdlp-DM43">wdlp-DM43</a></td><td> The replacement or extension of dwellings in the Green Belt (including outbuildings)</td></tr>
+    
+      <tr><td><a href="./wdlp-DM44">wdlp-DM44</a></td><td> Development in the Countryside Outside of the Green Belt</td></tr>
+    
+      <tr><td><a href="./wdlp-DM45">wdlp-DM45</a></td><td> Conversion of existing buildings in the Green Belt and other rural areas</td></tr>
+    
+      <tr><td><a href="./wdlp-DM46">wdlp-DM46</a></td><td> HS2 Safeguarded land</td></tr>
+    
+      <tr><td><a href="./wdlp-DM47">wdlp-DM47</a></td><td> Princes Risborough to Aylesbury (PRA) Safeguarded land</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC1">dsa-HWTC1</a></td><td> Delivering the Town Centre Vision</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC2">dsa-HWTC2</a></td><td> Town Centre Environment</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC3">dsa-HWTC3</a></td><td> Connections, Movement and Access</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC4">dsa-HWTC4</a></td><td> Economy</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC5">dsa-HWTC5</a></td><td> Primary Shopping Frontages: High Wycombe</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC6">dsa-HWTC6</a></td><td> Secondary Shopping Frontages: High Wycombe</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC7">dsa-HWTC7</a></td><td> Easton Street</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC8">dsa-HWTC8</a></td><td> Council Offices and Royal Mail Sorting Office</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC9">dsa-HWTC9</a></td><td> Land off Duke Street</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC10">dsa-HWTC10</a></td><td> Swan Frontage</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC11">dsa-HWTC11</a></td><td> Wycombe Hospital</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC12">dsa-HWTC12</a></td><td> Chilterns Shopping Centre And Frogmoor East</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC13">dsa-HWTC13</a></td><td> Lily’s Walk (Former Gas Works Site)</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC14">dsa-HWTC14</a></td><td> Buckingham House and Castle House</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC15">dsa-HWTC15</a></td><td> Collins House and Corner of Bridge Street/Desborough Road</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC16">dsa-HWTC16</a></td><td> Oxford Road roundabout</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC17">dsa-HWTC17</a></td><td> Bridge Street</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC18">dsa-HWTC18</a></td><td> Baker Street</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC19">dsa-HWTC19</a></td><td> Rapid House</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC20">dsa-HWTC20</a></td><td> Oxford Road (west)</td></tr>
+    
+      <tr><td><a href="./dsa-HWTC21">dsa-HWTC21</a></td><td> Central Business Centre</td></tr>
+    
+      <tr><td><a href="./dsa-HW1">dsa-HW1</a></td><td> Desborough Delivery and Design Framework</td></tr>
+    
+      <tr><td><a href="./dsa-HW2">dsa-HW2</a></td><td> Delivering New Open Space and River Corridor Improvements</td></tr>
+    
+      <tr><td><a href="./dsa-HW3">dsa-HW3</a></td><td> Green Street School</td></tr>
+    
+      <tr><td><a href="./dsa-MR1">dsa-MR1</a></td><td> Primary Shopping Frontages: Marlow</td></tr>
+    
+      <tr><td><a href="./dsa-MR2">dsa-MR2</a></td><td> Secondary Shopping Frontages: Marlow</td></tr>
+    
+      <tr><td><a href="./dsa-MR3">dsa-MR3</a></td><td> Riley Road</td></tr>
+    
+      <tr><td><a href="./dsa-MR4">dsa-MR4</a></td><td> Portlands</td></tr>
+    
+      <tr><td><a href="./dsa-MR5">dsa-MR5</a></td><td> Liston Road</td></tr>
+    
+      <tr><td><a href="./dsa-PR1">dsa-PR1</a></td><td> Primary Shopping Frontages: Princes Risborough</td></tr>
+    
+      <tr><td><a href="./dsa-PR2">dsa-PR2</a></td><td> Secondary Shopping Frontages: Princes Risborough</td></tr>
+    
+      <tr><td><a href="./dsa-DM1">dsa-DM1</a></td><td> Presumption in Favour of Sustainable Development</td></tr>
+    
+      <tr><td><a href="./dsa-DM2">dsa-DM2</a></td><td> Transport Requirements of Development Sites</td></tr>
+    
+      <tr><td><a href="./dsa-DM3">dsa-DM3</a></td><td> Transport Improvement Lines</td></tr>
+    
+      <tr><td><a href="./dsa-DM4">dsa-DM4</a></td><td> Former Bourne End To High Wycombe Railway Line</td></tr>
+    
+      <tr><td><a href="./dsa-DM5">dsa-DM5</a></td><td> Scattered Business Sites</td></tr>
+    
+      <tr><td><a href="./dsa-DM6">dsa-DM6</a></td><td> Mixed-Use Development</td></tr>
+    
+      <tr><td><a href="./dsa-DM7">dsa-DM7</a></td><td> Town Centre Boundaries</td></tr>
+    
+      <tr><td><a href="./dsa-DM8">dsa-DM8</a></td><td> The Primary Shopping Areas</td></tr>
+    
+      <tr><td><a href="./dsa-DM9">dsa-DM9</a></td><td> District Centres</td></tr>
+    
+      <tr><td><a href="./dsa-DM10">dsa-DM10</a></td><td> Thresholds for the Assessment of Schemes for Town Centre Impact</td></tr>
+    
+      <tr><td><a href="./dsa-DM11">dsa-DM11</a></td><td> Green Networks and Infrastructure</td></tr>
+    
+      <tr><td><a href="./dsa-DM12">dsa-DM12</a></td><td> Green Spaces</td></tr>
+    
+      <tr><td><a href="./dsa-DM13">dsa-DM13</a></td><td> Conservation and Enhancement of Sites, Habitats and Species of Biodiversity and Geodiversity Importance</td></tr>
+    
+      <tr><td><a href="./dsa-DM14">dsa-DM14</a></td><td> Biodiversity In Development</td></tr>
+    
+      <tr><td><a href="./dsa-DM15">dsa-DM15</a></td><td> Protection and Enhancement of River and Stream Corridors</td></tr>
+    
+      <tr><td><a href="./dsa-DM16">dsa-DM16</a></td><td> Open Space in New Development</td></tr>
+    
+      <tr><td><a href="./dsa-DM19">dsa-DM19</a></td><td> Infrastructure and Delivery</td></tr>
+    
+      <tr><td><a href="./bmwlp-P1">bmwlp-P1</a></td><td> Safeguarding Mineral Resources</td></tr>
+    
+      <tr><td><a href="./bmwlp-P2">bmwlp-P2</a></td><td> Spatial Strategy for Minerals Development</td></tr>
+    
+      <tr><td><a href="./bmwlp-P3">bmwlp-P3</a></td><td> Sand and Gravel Provision</td></tr>
+    
+      <tr><td><a href="./bmwlp-P4">bmwlp-P4</a></td><td> Allocated Sites for Sand and Gravel Provision</td></tr>
+    
+      <tr><td><a href="./bmwlp-P5">bmwlp-P5</a></td><td> Development Principles for Mineral Extraction</td></tr>
+    
+      <tr><td><a href="./bmwlp-P6">bmwlp-P6</a></td><td> Borrow Pits and Extraction as an Ancillary Activity</td></tr>
+    
+      <tr><td><a href="./bmwlp-P7">bmwlp-P7</a></td><td> Provision of Secondary and Recycled Aggregates</td></tr>
+    
+      <tr><td><a href="./bmwlp-P8">bmwlp-P8</a></td><td> Rail Aggregate Depots and Wharf Facilities</td></tr>
+    
+      <tr><td><a href="./bmwlp-P9">bmwlp-P9</a></td><td> Energy Minerals</td></tr>
+    
+      <tr><td><a href="./bmwlp-P10">bmwlp-P10</a></td><td> Waste Prevention and Minimisation in New Development</td></tr>
+    
+      <tr><td><a href="./bmwlp-P11">bmwlp-P11</a></td><td> Waste Management Capacity Needs</td></tr>
+    
+      <tr><td><a href="./bmwlp-P12">bmwlp-P12</a></td><td> Disposal to Landfill</td></tr>
+    
+      <tr><td><a href="./bmwlp-P13">bmwlp-P13</a></td><td> Spatial Strategy for Waste Management</td></tr>
+    
+      <tr><td><a href="./bmwlp-P14">bmwlp-P14</a></td><td> Development Principles for Waste Management Facilities</td></tr>
+    
+      <tr><td><a href="./bmwlp-P15">bmwlp-P15</a></td><td> Sewage Treatment Works</td></tr>
+    
+      <tr><td><a href="./bmwlp-P16">bmwlp-P16</a></td><td> Managing Impacts on Amenity and Natural Resources</td></tr>
+    
+      <tr><td><a href="./bmwlp-P17">bmwlp-P17</a></td><td> Sustainable Transport</td></tr>
+    
+      <tr><td><a href="./bmwlp-P18">bmwlp-P18</a></td><td> Natural Environment</td></tr>
+    
+      <tr><td><a href="./bmwlp-P19">bmwlp-P19</a></td><td> Historic Environment</td></tr>
+    
+      <tr><td><a href="./bmwlp-P20">bmwlp-P20</a></td><td> Landscape Character</td></tr>
+    
+      <tr><td><a href="./bmwlp-P21">bmwlp-P21</a></td><td> Green Belt</td></tr>
+    
+      <tr><td><a href="./bmwlp-P22">bmwlp-P22</a></td><td> Chilterns Area of Outstanding Natural Beauty</td></tr>
+    
+      <tr><td><a href="./bmwlp-P23">bmwlp-P23</a></td><td> Design and Climate Change</td></tr>
+    
+      <tr><td><a href="./bmwlp-P24">bmwlp-P24</a></td><td> Environmental Enhancement</td></tr>
+    
+      <tr><td><a href="./bmwlp-P25">bmwlp-P25</a></td><td> Delivering High Quality Restoration and Aftercare</td></tr>
+    
+      <tr><td><a href="./bmwlp-P26">bmwlp-P26</a></td><td> Safeguarding of Minerals Development and Waste Management Infrastructure</td></tr>
+    
+      <tr><td><a href="./bmwlp-P27">bmwlp-P27</a></td><td> Minimising Land Use Conflict</td></tr>
+    
+      <tr><td><a href="./bmwlp-P28">bmwlp-P28</a></td><td> Implementation</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-HQD1">astonclintonndp-HQD1</a></td><td> High Quality Design</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-HQD2">astonclintonndp-HQD2</a></td><td> High Quality Design</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-H1">astonclintonndp-H1</a></td><td> Housing - Settlement boundary</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-H2">astonclintonndp-H2</a></td><td> Housing - Housing development</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-H3">astonclintonndp-H3</a></td><td> Housing - Affordable housing</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-H4">astonclintonndp-H4</a></td><td> Housing for Older People</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-H5">astonclintonndp-H5</a></td><td> Housing - Mix of housing</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-B1">astonclintonndp-B1</a></td><td> Business - Community facilities</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-B2">astonclintonndp-B2</a></td><td> Business - Rural employment</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-B3">astonclintonndp-B3</a></td><td> Business - New employment opportunities</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-B4">astonclintonndp-B4</a></td><td> Business - High speed broadband</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-L1">astonclintonndp-L1</a></td><td> Leisure - Aston Clinton Park</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-L2">astonclintonndp-L2</a></td><td> Leisure - Public open spaces, footpaths, cycle & bridleways</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-L3">astonclintonndp-L3</a></td><td> Leisure - Community Centre</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-E1">astonclintonndp-E1</a></td><td> Education & Health - Doctors & School expansion</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-E2">astonclintonndp-E2</a></td><td> Education & Health - Improvements & Expansion to the School</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-T1">astonclintonndp-T1</a></td><td> Transport - Traffic mitigation</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-T2">astonclintonndp-T2</a></td><td> Transport - Encourage walking & cycling</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-EN1">astonclintonndp-EN1</a></td><td> Environment - Development impact on biodiversity</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-EN2">astonclintonndp-EN2</a></td><td> Environment - Protecting biodiversity loss</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-EN3">astonclintonndp-EN3</a></td><td> Environment - Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./astonclintonndp-EN4">astonclintonndp-EN4</a></td><td> Environment - Abating flood risk</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-HP1">buckinghamndp-HP1</a></td><td> Allocate land for around 617 new dwellings</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-HP2">buckinghamndp-HP2</a></td><td> Allocate land for 400 new rooms for University expansion</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-HP3">buckinghamndp-HP3</a></td><td> Allocate land for self build</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-HP4">buckinghamndp-HP4</a></td><td> Provide a diverse housing mix</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-HP5">buckinghamndp-HP5</a></td><td> Provide affordable housing</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-HP6">buckinghamndp-HP6</a></td><td> Phasing</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-HP7">buckinghamndp-HP7</a></td><td> Guidelines for Windfall sites</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-DHE1">buckinghamndp-DHE1</a></td><td> Protect existing trees and provision of trees in developments</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-DHE2">buckinghamndp-DHE2</a></td><td> Standard of ecological information required to minimise the impact on natural habitats</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-DHE3">buckinghamndp-DHE3</a></td><td> Protection of designated sites and local and national priority habitats and species</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-DHE4">buckinghamndp-DHE4</a></td><td> Protection of movement corridors</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-DHE5">buckinghamndp-DHE5</a></td><td> Biodiversity in Development Landscaping</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-DHE6">buckinghamndp-DHE6</a></td><td> Provision of good quality private outdoor space</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-CLH1">buckinghamndp-CLH1</a></td><td> Allocate land for a Cemetery</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-CLH2">buckinghamndp-CLH2</a></td><td> Provision of play provision for new developments</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-CLH3">buckinghamndp-CLH3</a></td><td> Allocate land for allotments</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-CLH4">buckinghamndp-CLH4</a></td><td> Protection of existing and provision of new health facilities</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-CLH5">buckinghamndp-CLH5</a></td><td> Protection of existing green open space</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-CLH6">buckinghamndp-CLH6</a></td><td> Development of Canal Area</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-CLH7">buckinghamndp-CLH7</a></td><td> Preservation of St. Rumbold’s Well</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-CLH8">buckinghamndp-CLH8</a></td><td> Continuation and expansion of the Riverside Walk</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-EE1">buckinghamndp-EE1</a></td><td> Allocate land for employment development</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-EE2">buckinghamndp-EE2</a></td><td> Allocation of land for retail, office and mixed development</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-EE3">buckinghamndp-EE3</a></td><td> Locate new retail development within the town centre</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-EE4">buckinghamndp-EE4</a></td><td> Retain and enhance the primary and secondary retail frontages</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-EE5">buckinghamndp-EE5</a></td><td> Allocation of land for town centre parking</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-EE6">buckinghamndp-EE6</a></td><td> Telecommunication provision</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-EE7">buckinghamndp-EE7</a></td><td> Preservation of existing primary and senior school sites</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-EE8">buckinghamndp-EE8</a></td><td> Land allocated to University of Buckingham expansion</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-I1">buckinghamndp-I1</a></td><td> New disabled access requirement for new pedestrian routes</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-I2">buckinghamndp-I2</a></td><td> Renewable energy generation</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-I3">buckinghamndp-I3</a></td><td> Rainwater collection</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-I4">buckinghamndp-I4</a></td><td> Development upon the flood plain</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-I5">buckinghamndp-I5</a></td><td> Sewage Management</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-SR1">buckinghamndp-SR1</a></td><td> Site Design Brief</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-SR2">buckinghamndp-SR2</a></td><td> Site G</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-SR3">buckinghamndp-SR3</a></td><td> Site H</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-SR4">buckinghamndp-SR4</a></td><td> Site I</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-SR5">buckinghamndp-SR5</a></td><td> Site J</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-SR6">buckinghamndp-SR6</a></td><td> Site K</td></tr>
+    
+      <tr><td><a href="./buckinghamndp-SR7">buckinghamndp-SR7</a></td><td> Site M</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP1">bucklandndp-BP1</a></td><td> Development within and adjacent to the Conservation Area</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP2">bucklandndp-BP2</a></td><td> AONB/Green Belt</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP3">bucklandndp-BP3</a></td><td> Local Distinctiveness</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP4">bucklandndp-BP4</a></td><td> No Further Coalescence</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP5">bucklandndp-BP5</a></td><td> New Development</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP6">bucklandndp-BP6</a></td><td> Meeting Local Housing Needs</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP7">bucklandndp-BP7</a></td><td> Affordable Homes</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP8">bucklandndp-BP8</a></td><td> Small business sites</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP9">bucklandndp-BP9</a></td><td> Redevelopment of existing businesses</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP10">bucklandndp-BP10</a></td><td> Reuse and Relocation of Farm Buildings</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP11">bucklandndp-BP11</a></td><td> Provision of on-site parking spaces</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP12">bucklandndp-BP12</a></td><td> Business traffic</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP13">bucklandndp-BP13</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP14">bucklandndp-BP14</a></td><td> Heritage</td></tr>
+    
+      <tr><td><a href="./bucklandndp-BP15">bucklandndp-BP15</a></td><td> Natural Environment</td></tr>
+    
+      <tr><td><a href="./cheddingtonndp-P1">cheddingtonndp-P1</a></td><td> A Spatial Plan for the Parish</td></tr>
+    
+      <tr><td><a href="./cheddingtonndp-P2">cheddingtonndp-P2</a></td><td> Housing Site Allocations</td></tr>
+    
+      <tr><td><a href="./cheddingtonndp-P3">cheddingtonndp-P3</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./cheddingtonndp-P4">cheddingtonndp-P4</a></td><td> Design</td></tr>
+    
+      <tr><td><a href="./cheddingtonndp-P5">cheddingtonndp-P5</a></td><td> Southend Hill & Westend Hill Heritage Asset & Special Landscape</td></tr>
+    
+      <tr><td><a href="./cheddingtonndp-P6">cheddingtonndp-P6</a></td><td> Green Infrastructure & Biodiversity</td></tr>
+    
+      <tr><td><a href="./cheddingtonndp-P7">cheddingtonndp-P7</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP1">edlesboroughndp-EP1</a></td><td> The Edlesborough Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP2">edlesboroughndp-EP2</a></td><td> Land at The Green, Edlesborough</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP3">edlesboroughndp-EP3</a></td><td> Land adjacent to Good Intent, Edlesborough</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP4">edlesboroughndp-EP4</a></td><td> Land at Slicketts Lane, Edlesborough</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP5">edlesboroughndp-EP5</a></td><td> Commercial & Retail Developments</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP6">edlesboroughndp-EP6</a></td><td> Economic Development</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP7">edlesboroughndp-EP7</a></td><td> Expansion of Local Services</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP8">edlesboroughndp-EP8</a></td><td> The Northall Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP9">edlesboroughndp-EP9</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP10">edlesboroughndp-EP10</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP11">edlesboroughndp-EP11</a></td><td> Buildings of Local Interest</td></tr>
+    
+      <tr><td><a href="./edlesboroughndp-EP12">edlesboroughndp-EP12</a></td><td> Housing Mix & Design</td></tr>
+    
+      <tr><td><a href="./greathorwoodndp-P1">greathorwoodndp-P1</a></td><td> Spatial Plan & Sustainable Development</td></tr>
+    
+      <tr><td><a href="./greathorwoodndp-P2">greathorwoodndp-P2</a></td><td> Land South of Little Horwood Road</td></tr>
+    
+      <tr><td><a href="./greathorwoodndp-P3">greathorwoodndp-P3</a></td><td> Land North of Little Horwood Road</td></tr>
+    
+      <tr><td><a href="./greathorwoodndp-P4">greathorwoodndp-P4</a></td><td> Land Off Nash Road</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-TGA1">haddenhamndp-TGA1</a></td><td> Car and Cycle Parking Standards</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-TGA2">haddenhamndp-TGA2</a></td><td> On-site Walking and Cycling</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-TGA3">haddenhamndp-TGA3</a></td><td> Cycle and Pedestrian Networks</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-CES1">haddenhamndp-CES1</a></td><td> Play Facilities</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-HWS1">haddenhamndp-HWS1</a></td><td> Local Green Space Designations</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-HWS2">haddenhamndp-HWS2</a></td><td> Protecting Community Amenities</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-SRL1">haddenhamndp-SRL1</a></td><td> Redevelopment of the Recreation Ground Pavilion</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-SRL2">haddenhamndp-SRL2</a></td><td> Redevelopment at Banks Park</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-SRL3">haddenhamndp-SRL3</a></td><td> Enhancing, Protecting and Providing new Natural Environment Habitats, Trees and Hedgerows</td></tr>
+    
+      <tr><td><a href="./haddenhamndp-RBJ1">haddenhamndp-RBJ1</a></td><td> Retaining the Retail Arcade</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-HSG1">ivinghoendp-HSG1</a></td><td> Development within Ivinghoe and Ivinghoe Aston</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-HSG2">ivinghoendp-HSG2</a></td><td> Development outside Ivinghoe and Ivinghoe Aston</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-ENV1">ivinghoendp-ENV1</a></td><td> Biodiversity net gain</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-ENV2">ivinghoendp-ENV2</a></td><td> Heritage assets</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-ENV3">ivinghoendp-ENV3</a></td><td> Footpaths, bridleways and cycleways</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-TRA1">ivinghoendp-TRA1</a></td><td> Highway safety and parking</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-TRA2">ivinghoendp-TRA2</a></td><td> Developer contribution to highway safety and parking</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-REC1">ivinghoendp-REC1</a></td><td> Recreational facilities</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-REC2">ivinghoendp-REC2</a></td><td> Impacts of other developments on recreational facilities</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-TEL1">ivinghoendp-TEL1</a></td><td> Telecommunications technology</td></tr>
+    
+      <tr><td><a href="./ivinghoendp-BUS1">ivinghoendp-BUS1</a></td><td> Encouragement of businesses</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC1">longcrendonndp-LC1</a></td><td> Long Crendon Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC2">longcrendonndp-LC2</a></td><td> New Homes off Westfield Road</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC3">longcrendonndp-LC3</a></td><td> New Homes off Sandy Lane</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC4">longcrendonndp-LC4</a></td><td> Housing for Older People</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC5">longcrendonndp-LC5</a></td><td> Key Employment Sites</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC6">longcrendonndp-LC6</a></td><td> Village Square</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC7">longcrendonndp-LC7</a></td><td> Long Crendon Primary School</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC8">longcrendonndp-LC8</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC9">longcrendonndp-LC9</a></td><td> General Design Principles</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC10">longcrendonndp-LC10</a></td><td> Design in the Conservation Areas & their Setting</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC11">longcrendonndp-LC11</a></td><td> Buildings of Note</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC12">longcrendonndp-LC12</a></td><td> Key Views</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC13">longcrendonndp-LC13</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./longcrendonndp-LC14">longcrendonndp-LC14</a></td><td> Green Infrastructure & Biodiversity</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG1">marshgibbonndp-MG1</a></td><td> Development within Conservation Areas</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG2">marshgibbonndp-MG2</a></td><td> Distinctive Local Character</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG3">marshgibbonndp-MG3</a></td><td> Swan Field Local Green Space Designation</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG4">marshgibbonndp-MG4</a></td><td> Moat Close Local Green Space Designation</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG5">marshgibbonndp-MG5</a></td><td> Developing on the Boundary of the Village</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG6">marshgibbonndp-MG6</a></td><td> Infill Housing Development</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG7">marshgibbonndp-MG7</a></td><td> Meeting Local Needs</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG8">marshgibbonndp-MG8</a></td><td> Affordable Homes</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG9">marshgibbonndp-MG9</a></td><td> Density of all Housing</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG10">marshgibbonndp-MG10</a></td><td> Small scale Businesses</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG11">marshgibbonndp-MG11</a></td><td> Relocation of Businesses</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG12">marshgibbonndp-MG12</a></td><td> Reuse and Relocation of Farm Buildings</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG13">marshgibbonndp-MG13</a></td><td> Providing Parking Spaces</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG14">marshgibbonndp-MG14</a></td><td> Private Visitor Parking</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG15">marshgibbonndp-MG15</a></td><td> Business Traffic</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG16">marshgibbonndp-MG16</a></td><td> Access and Parking for School</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG17">marshgibbonndp-MG17</a></td><td> Protection of Community Facilities</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG18">marshgibbonndp-MG18</a></td><td> Enhancing, Protecting and Provision of new Recreation Facilities</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG19">marshgibbonndp-MG19</a></td><td> Enhancing, Protecting and Provision of new Natural Environment Habitats, Trees and Hedgerows</td></tr>
+    
+      <tr><td><a href="./marshgibbonndp-MG20">marshgibbonndp-MG20</a></td><td> Water and Waste</td></tr>
+    
+      <tr><td><a href="./pitstonendp-P1">pitstonendp-P1</a></td><td> Pitstone Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./pitstonendp-P2">pitstonendp-P2</a></td><td> Land at Marsworth Road / Vicarage Road</td></tr>
+    
+      <tr><td><a href="./pitstonendp-P3">pitstonendp-P3</a></td><td> Land North of Marsworth Road</td></tr>
+    
+      <tr><td><a href="./pitstonendp-P4">pitstonendp-P4</a></td><td> Land West of Westfield Road</td></tr>
+    
+      <tr><td><a href="./pitstonendp-P5">pitstonendp-P5</a></td><td> Area of Special Landscape Value</td></tr>
+    
+      <tr><td><a href="./pitstonendp-P6">pitstonendp-P6</a></td><td> Development Principles</td></tr>
+    
+      <tr><td><a href="./pitstonendp-P7">pitstonendp-P7</a></td><td> Local Green Space</td></tr>
+    
+      <tr><td><a href="./pitstonendp-P8">pitstonendp-P8</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./quaintonndp-E1">quaintonndp-E1</a></td><td> Environment</td></tr>
+    
+      <tr><td><a href="./quaintonndp-E2">quaintonndp-E2</a></td><td> Environment</td></tr>
+    
+      <tr><td><a href="./quaintonndp-H1">quaintonndp-H1</a></td><td> Housing</td></tr>
+    
+      <tr><td><a href="./quaintonndp-H2">quaintonndp-H2</a></td><td> Housing</td></tr>
+    
+      <tr><td><a href="./quaintonndp-CF1">quaintonndp-CF1</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./quaintonndp-NE1">quaintonndp-NE1</a></td><td> Natural Environment- Green Spaces</td></tr>
+    
+      <tr><td><a href="./quaintonndp-NE2">quaintonndp-NE2</a></td><td> Natural Environment</td></tr>
+    
+      <tr><td><a href="./quaintonndp-LE1">quaintonndp-LE1</a></td><td> Local Employment</td></tr>
+    
+      <tr><td><a href="./quaintonndp-T1">quaintonndp-T1</a></td><td> Parking provision</td></tr>
+    
+      <tr><td><a href="./quaintonndp-T2">quaintonndp-T2</a></td><td> Traffic</td></tr>
+    
+      <tr><td><a href="./quaintonndp-I1">quaintonndp-I1</a></td><td> Infrastructure</td></tr>
+    
+      <tr><td><a href="./slaptonndp-SLP1">slaptonndp-SLP1</a></td><td> Slapton Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./slaptonndp-SLP2">slaptonndp-SLP2</a></td><td> Housing Site Reservations</td></tr>
+    
+      <tr><td><a href="./slaptonndp-SLP3">slaptonndp-SLP3</a></td><td> Village Hall</td></tr>
+    
+      <tr><td><a href="./slaptonndp-SLP4">slaptonndp-SLP4</a></td><td> Employment Sites</td></tr>
+    
+      <tr><td><a href="./slaptonndp-SLP5">slaptonndp-SLP5</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./slaptonndp-SLP6">slaptonndp-SLP6</a></td><td> Design</td></tr>
+    
+      <tr><td><a href="./steepleclaydonndp-SC1">steepleclaydonndp-SC1</a></td><td> Steeple Claydon Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./steepleclaydonndp-SC2">steepleclaydonndp-SC2</a></td><td> Land at Molly’s Field, Addison Road</td></tr>
+    
+      <tr><td><a href="./steepleclaydonndp-SC3">steepleclaydonndp-SC3</a></td><td> The Co-op, West Street</td></tr>
+    
+      <tr><td><a href="./steepleclaydonndp-SC4">steepleclaydonndp-SC4</a></td><td> The GP Surgery, Vicarage Lane</td></tr>
+    
+      <tr><td><a href="./steepleclaydonndp-SC5">steepleclaydonndp-SC5</a></td><td> Land at Queen Catherine Road</td></tr>
+    
+      <tr><td><a href="./steepleclaydonndp-SC6">steepleclaydonndp-SC6</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./steepleclaydonndp-SC7">steepleclaydonndp-SC7</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./steepleclaydonndp-SC8">steepleclaydonndp-SC8</a></td><td> Design</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD1">waddesdonndp-WAD1</a></td><td> Waddesdon Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD2">waddesdonndp-WAD2</a></td><td> Housing Site Allocation</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD3">waddesdonndp-WAD3</a></td><td> Affordable Housing</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD4">waddesdonndp-WAD4</a></td><td> Waddesdon Manor, Waddesdon Estate and the National Trust</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD5">waddesdonndp-WAD5</a></td><td> Commercial Buildings</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD6">waddesdonndp-WAD6</a></td><td> Employment Land</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD7">waddesdonndp-WAD7</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD8">waddesdonndp-WAD8</a></td><td> Design in the Conservation Area</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD9">waddesdonndp-WAD9</a></td><td> Design in the Setting of the Conservation Area</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD10">waddesdonndp-WAD10</a></td><td> Views into and out of the Conservation Area</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD11">waddesdonndp-WAD11</a></td><td> Buildings of Local Note</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD12">waddesdonndp-WAD12</a></td><td> Transport & Car Parking</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD13">waddesdonndp-WAD13</a></td><td> Green Infrastructure & Biodiversity</td></tr>
+    
+      <tr><td><a href="./waddesdonndp-WAD14">waddesdonndp-WAD14</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-H1">westonturvillendp-H1</a></td><td> Weston Turville Settlement Boundaries</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-H2">westonturvillendp-H2</a></td><td> Development Design in the Neighbourhood Area</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-H3">westonturvillendp-H3</a></td><td> Development within the Conservation Area</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-H4">westonturvillendp-H4</a></td><td> Housing Mix and Tenure</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-T1">westonturvillendp-T1</a></td><td> Improvements to road safety and ease traffic congestion</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-T2">westonturvillendp-T2</a></td><td> Strategy for improving pedestrian and cycle connections within the Parish and to surrounding area</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-T3">westonturvillendp-T3</a></td><td> Encourage better planning of public transport</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-E1">westonturvillendp-E1</a></td><td> Protection of Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-E2">westonturvillendp-E2</a></td><td> Protection of key views and vistas</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-E3">westonturvillendp-E3</a></td><td> Biodiversity</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-C1">westonturvillendp-C1</a></td><td> Retention and enhancement of community facilities</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-C2">westonturvillendp-C2</a></td><td> Replacement of community facilities</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-C3">westonturvillendp-C3</a></td><td> Public Rights of Way</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-HE1">westonturvillendp-HE1</a></td><td> Improvements to Health facilities by contributions from developers of new housing or employment schemes</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-HE2">westonturvillendp-HE2</a></td><td> Access to Education provision</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-B1">westonturvillendp-B1</a></td><td> Revitalisation of the village centre</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-B2">westonturvillendp-B2</a></td><td> Encouragement of growth and development of small businesses</td></tr>
+    
+      <tr><td><a href="./westonturvillendp-B3">westonturvillendp-B3</a></td><td> Improvements to broadband and other fibre optic connections</td></tr>
+    
+      <tr><td><a href="./wendoverndp-H1">wendoverndp-H1</a></td><td> Wendover Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./wendoverndp-H2">wendoverndp-H2</a></td><td> Development in the Conservation Area</td></tr>
+    
+      <tr><td><a href="./wendoverndp-H3">wendoverndp-H3</a></td><td> Affordable Housing</td></tr>
+    
+      <tr><td><a href="./wendoverndp-H4">wendoverndp-H4</a></td><td> Retirement Housing</td></tr>
+    
+      <tr><td><a href="./wendoverndp-SD1">wendoverndp-SD1</a></td><td> Design for Sustainable Development within the Neighbourhood Plan Area</td></tr>
+    
+      <tr><td><a href="./wendoverndp-SD2">wendoverndp-SD2</a></td><td> Design for Sustainable Developments - Parking</td></tr>
+    
+      <tr><td><a href="./wendoverndp-B1">wendoverndp-B1</a></td><td> Change of Use from Business to Residential</td></tr>
+    
+      <tr><td><a href="./wendoverndp-CF1">wendoverndp-CF1</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./wendoverndp-CH1">wendoverndp-CH1</a></td><td> Conservation of Ecology, Biodiversity and Natural Assets</td></tr>
+    
+      <tr><td><a href="./wendoverndp-G1">wendoverndp-G1</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./wendoverndp-G2">wendoverndp-G2</a></td><td> Key Views and Vistas</td></tr>
+    
+      <tr><td><a href="./wendoverndp-G3">wendoverndp-G3</a></td><td> Biodiversity</td></tr>
+    
+      <tr><td><a href="./wendoverndp-IC1">wendoverndp-IC1</a></td><td> Internet and Mobile Signal</td></tr>
+    
+      <tr><td><a href="./wendoverndp-T1">wendoverndp-T1</a></td><td> Parking</td></tr>
+    
+      <tr><td><a href="./wendoverndp-T2">wendoverndp-T2</a></td><td> Road Safety and Traffic Management</td></tr>
+    
+      <tr><td><a href="./wendoverndp-T3">wendoverndp-T3</a></td><td> Cycle and Pedestrian Routes</td></tr>
+    
+      <tr><td><a href="./wendoverndp-T4">wendoverndp-T4</a></td><td> Public Transport</td></tr>
+    
+      <tr><td><a href="./wingndp-CGS1">wingndp-CGS1</a></td><td> Respecting the Environment</td></tr>
+    
+      <tr><td><a href="./wingndp-CGS2">wingndp-CGS2</a></td><td> Open Space in new development</td></tr>
+    
+      <tr><td><a href="./wingndp-CGS3">wingndp-CGS3</a></td><td> Local Green Space Designation</td></tr>
+    
+      <tr><td><a href="./wingndp-F1">wingndp-F1</a></td><td> Village Facilities</td></tr>
+    
+      <tr><td><a href="./wingndp-HE1">wingndp-HE1</a></td><td> Heritage</td></tr>
+    
+      <tr><td><a href="./wingndp-HE2">wingndp-HE2</a></td><td> Archaeology</td></tr>
+    
+      <tr><td><a href="./wingndp-VE1">wingndp-VE1</a></td><td> Visiting and Enjoying Wing</td></tr>
+    
+      <tr><td><a href="./wingndp-E1">wingndp-E1</a></td><td> New shops and employment provision in the village</td></tr>
+    
+      <tr><td><a href="./wingndp-E2">wingndp-E2</a></td><td> New employment provision in the Parish beyond Wing Village</td></tr>
+    
+      <tr><td><a href="./wingndp-E3">wingndp-E3</a></td><td> Protection of existing employment provision</td></tr>
+    
+      <tr><td><a href="./wingndp-E4">wingndp-E4</a></td><td> Broadband</td></tr>
+    
+      <tr><td><a href="./wingndp-T1">wingndp-T1</a></td><td> Residential Parking standards</td></tr>
+    
+      <tr><td><a href="./wingndp-T2">wingndp-T2</a></td><td> Impact on traffic</td></tr>
+    
+      <tr><td><a href="./wingndp-T3">wingndp-T3</a></td><td> Traffic and Parking</td></tr>
+    
+      <tr><td><a href="./wingndp-T4">wingndp-T4</a></td><td> Cyclists and Pedestrians</td></tr>
+    
+      <tr><td><a href="./wingndp-HO1">wingndp-HO1</a></td><td> Infill Housing</td></tr>
+    
+      <tr><td><a href="./wingndp-HO2">wingndp-HO2</a></td><td> Housing mix</td></tr>
+    
+      <tr><td><a href="./wingndp-HO3">wingndp-HO3</a></td><td> Affordable housing</td></tr>
+    
+      <tr><td><a href="./wingndp-A1">wingndp-A1</a></td><td> Land at Stewkley Road/Dormer Avenue</td></tr>
+    
+      <tr><td><a href="./wingndp-A2">wingndp-A2</a></td><td> Land off Meadow Way/Moorlands</td></tr>
+    
+      <tr><td><a href="./wingraverowshamndp-P1">wingraverowshamndp-P1</a></td><td> A Spatial Plan for the Parish</td></tr>
+    
+      <tr><td><a href="./wingraverowshamndp-P2">wingraverowshamndp-P2</a></td><td> Land South of Twelve Leys, Wingrave</td></tr>
+    
+      <tr><td><a href="./wingraverowshamndp-P3">wingraverowshamndp-P3</a></td><td> Land North of Baldways Close, Wingrave</td></tr>
+    
+      <tr><td><a href="./wingraverowshamndp-P4">wingraverowshamndp-P4</a></td><td> Land South of Leighton Road, Wingrave</td></tr>
+    
+      <tr><td><a href="./wingraverowshamndp-P5">wingraverowshamndp-P5</a></td><td> Design</td></tr>
+    
+      <tr><td><a href="./wingraverowshamndp-P6">wingraverowshamndp-P6</a></td><td> Local Employment</td></tr>
+    
+      <tr><td><a href="./wingraverowshamndp-P7">wingraverowshamndp-P7</a></td><td> Wingrave Community Facilities</td></tr>
+    
+      <tr><td><a href="./wingraverowshamndp-P8">wingraverowshamndp-P8</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./winslowndp-P1">winslowndp-P1</a></td><td> The Presumption in Favour of Sustainable Development</td></tr>
+    
+      <tr><td><a href="./winslowndp-P2">winslowndp-P2</a></td><td> A Spatial Plan for the Town</td></tr>
+    
+      <tr><td><a href="./winslowndp-P3">winslowndp-P3</a></td><td> Housing Allocations</td></tr>
+    
+      <tr><td><a href="./winslowndp-P4">winslowndp-P4</a></td><td> Affordable Housing</td></tr>
+    
+      <tr><td><a href="./winslowndp-P5">winslowndp-P5</a></td><td> Housing Design</td></tr>
+    
+      <tr><td><a href="./winslowndp-P6">winslowndp-P6</a></td><td> Land South of Buckingham Road</td></tr>
+    
+      <tr><td><a href="./winslowndp-P7">winslowndp-P7</a></td><td> Land North of Buckingham Road</td></tr>
+    
+      <tr><td><a href="./winslowndp-P8">winslowndp-P8</a></td><td> Cycle Routes</td></tr>
+    
+      <tr><td><a href="./winslowndp-P9">winslowndp-P9</a></td><td> Bus Services</td></tr>
+    
+      <tr><td><a href="./winslowndp-P10">winslowndp-P10</a></td><td> Traffic Management</td></tr>
+    
+      <tr><td><a href="./winslowndp-P11">winslowndp-P11</a></td><td> Winslow Community Centre</td></tr>
+    
+      <tr><td><a href="./winslowndp-P12">winslowndp-P12</a></td><td> Winslow Medical Services Centre</td></tr>
+    
+      <tr><td><a href="./winslowndp-P13">winslowndp-P13</a></td><td> Sports Facilities</td></tr>
+    
+      <tr><td><a href="./winslowndp-P14">winslowndp-P14</a></td><td> Childcare Nursery</td></tr>
+    
+      <tr><td><a href="./winslowndp-P15">winslowndp-P15</a></td><td> Play Facilities for Young People</td></tr>
+    
+      <tr><td><a href="./winslowndp-P16">winslowndp-P16</a></td><td> Assets of Community Value</td></tr>
+    
+      <tr><td><a href="./winslowndp-P17">winslowndp-P17</a></td><td> Winslow Shopping Area</td></tr>
+    
+      <tr><td><a href="./winslowndp-P18">winslowndp-P18</a></td><td> Small Supermarket</td></tr>
+    
+      <tr><td><a href="./winslowndp-P19">winslowndp-P19</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./winslowndp-P20">winslowndp-P20</a></td><td> Infrastructure Investment</td></tr>
+    
+      <tr><td><a href="./worminghallndp-SB1">worminghallndp-SB1</a></td><td> Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./worminghallndp-NH1">worminghallndp-NH1</a></td><td> New Houses</td></tr>
+    
+      <tr><td><a href="./worminghallndp-NH2">worminghallndp-NH2</a></td><td> Housing Mix</td></tr>
+    
+      <tr><td><a href="./worminghallndp-NH3">worminghallndp-NH3</a></td><td> Coldstream Farm/Rear of the Clifden Arms</td></tr>
+    
+      <tr><td><a href="./worminghallndp-RC1">worminghallndp-RC1</a></td><td> Rural Character</td></tr>
+    
+      <tr><td><a href="./worminghallndp-CFR1">worminghallndp-CFR1</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./worminghallndp-CFR2">worminghallndp-CFR2</a></td><td> Recreation</td></tr>
+    
+      <tr><td><a href="./worminghallndp-CFR3">worminghallndp-CFR3</a></td><td> Footpaths</td></tr>
+    
+      <tr><td><a href="./worminghallndp-CH1">worminghallndp-CH1</a></td><td> Heritage</td></tr>
+    
+      <tr><td><a href="./worminghallndp-TT1">worminghallndp-TT1</a></td><td> Parking and Traffic</td></tr>
+    
+      <tr><td><a href="./chalfontstgilesndp-HP1">chalfontstgilesndp-HP1</a></td><td> Rural Exception Sites in the Parish</td></tr>
+    
+      <tr><td><a href="./chalfontstgilesndp-HP2">chalfontstgilesndp-HP2</a></td><td> Well Integrated Affordable Housing in the Built-up Area</td></tr>
+    
+      <tr><td><a href="./chalfontstgilesndp-CFP1">chalfontstgilesndp-CFP1</a></td><td> Protecting and Enhancing Community Facilities in the Parish</td></tr>
+    
+      <tr><td><a href="./chalfontstgilesndp-EP1">chalfontstgilesndp-EP1</a></td><td> Supporting the Vitality of the Parish’s Local Economy</td></tr>
+    
+      <tr><td><a href="./chalfontstgilesndp-NEP1">chalfontstgilesndp-NEP1</a></td><td> Green Routes</td></tr>
+    
+      <tr><td><a href="./chalfontstgilesndp-NEP2">chalfontstgilesndp-NEP2</a></td><td> Local Green Spaces in the Parish</td></tr>
+    
+      <tr><td><a href="./chalfontstgilesndp-HEP1">chalfontstgilesndp-HEP1</a></td><td> Heritage Assets and Conservation Areas in the Parish</td></tr>
+    
+      <tr><td><a href="./chalfontstgilesndp-DP1">chalfontstgilesndp-DP1</a></td><td> New Development</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-VC1">chalfontstpeterndp-VC1</a></td><td> The design of new development within the Village Centre must conserve or enhance the character of the area</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-VC2">chalfontstpeterndp-VC2</a></td><td> Buildings that make a positive architectural contribution to the Village Centre are identified in Figure 5.3. Improvements to these buildings will be supported and encouraged so long as they maintain or enhance the positive contribution the building makes to the Village Centre. Replacement of any building will only be permitted in exceptional circumstances provided that the proposed development is (i) of better architectural quality than the existing building; and (ii) makes a more positive architectural contribution to the Village Centre. Replacement buildings that fail to make a more positive contribution or are of lesser quality than the existing will be resisted.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-VC3">chalfontstpeterndp-VC3</a></td><td> To promote the vitality and viability of the village centre, the District Shopping Centre is extended as shown in Figure 5.4</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-VC4">chalfontstpeterndp-VC4</a></td><td> Within Primary Shopping Frontages changes of use from use class A1 will be refused unless the proposed use would not create a significant break in the shopping frontage i.e. the number of unitsnot to exceed 10% non-A1 type uses in a frontage comprising the application site and fi ve units either side of the proposal site (where there are fi ve units within the frontage) and such that there will not result in the proposed use adjoining another non-A1 type use</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-VC5">chalfontstpeterndp-VC5</a></td><td> Improvements to or redevelopment of St Peter’s Court must support the Village Centre by following the principles set out below</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-VC6">chalfontstpeterndp-VC6</a></td><td> New shopfonts or replacement shopfronts must be designed to accord with the Shop Front Design Guide set out in Appendix A of this Neighbourhood Plan</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-H1">chalfontstpeterndp-H1</a></td><td> On developments where there is a net gain of four or more dwellings, two bedroom dwellings must be included.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-H2">chalfontstpeterndp-H2</a></td><td> The development of new homes for people wishing to down-size from larger dwellings to smaller homes will be supported. This includes dwellings in both C3 (dwellings) and C2 (residential care homes) use classes.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-H3">chalfontstpeterndp-H3</a></td><td> For developments where the net gain is ten or more dwellings, a Sustainability Statement must be submitted with any planning application demonstrating how the proposed development accords with higher level sustainability and energy policy requirements.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-H4">chalfontstpeterndp-H4</a></td><td> Where planning permission is required, roof mounted solar panels and photo-voltaic panels should be designed to minimise visual impact. This applies to panels on new buildings as well as retrofi tted panels.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-H5">chalfontstpeterndp-H5</a></td><td> Design and Access Statements must demonstrate how the proposed development fi ts in with the specifi c characteristics of the Character Area in which it is located</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-H6">chalfontstpeterndp-H6</a></td><td> Residential development that reinforces the positive characteristics of its specifi c Character Area will be permitted subject to its meeting the requirements of other relevant policies in this Neighbourhood Plan, and higher level planning policy. Development that fails to reinforce the characteristics of its specifi c Character Area will be resisted.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-H7">chalfontstpeterndp-H7</a></td><td> Where planning permission is required, alterations and/or extensions to existing residential properties should maintain or enhance the design, character and quality of the building.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-O1">chalfontstpeterndp-O1</a></td><td> The change of use of open space identified in Figure 7.1, to any other purpose will not be permitted. In exceptional circumstances, school grounds and sports facilities may change use so long as the open space is re-provided within the Parish.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-O2">chalfontstpeterndp-O2</a></td><td> The spaces defined in Figures 7.2 and 7.3 as Local Green Space are designated as such and will be protected and, where possible, enhanced</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-LC1">chalfontstpeterndp-LC1</a></td><td> Proposals to change the use of the land and buildings identifi ed in Table 8.1 and Figure 8.1 will be resisted.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-LC2">chalfontstpeterndp-LC2</a></td><td> Retention of, improvements to, replacement and expansion of existing healthcare facilities will be supported. Loss, removal or degradation of existing healthcare facilities will be resisted unless it can be demonstrated that the replacement provision meets identifi ed healthcare needs</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-LC3">chalfontstpeterndp-LC3</a></td><td> The provision of new healthcare facilities within the village will be supported.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-MP1">chalfontstpeterndp-MP1</a></td><td> The siting of mobile phone masts should seek to minimise their visual impact, and grouping of new masts with existing is encouraged. New phone masts are preferred in the locations identifi ed in Figure 9.3.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-MP2">chalfontstpeterndp-MP2</a></td><td> The sharing of existing and future masts will be encouraged where the visual impact of the proposed changes do not result in unacceptable harm to the character of the area.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-MP3">chalfontstpeterndp-MP3</a></td><td> Mobile phone masts and associated equipment shall be designed to minimise visual impact.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-PWI1">chalfontstpeterndp-PWI1</a></td><td> Proposals that involve the creation of new employment opportunities within the rural area will be supported so long as they accord with policies in the Neighbourhood Plan and higher level policies.</td></tr>
+    
+      <tr><td><a href="./chalfontstpeterndp-PWI2">chalfontstpeterndp-PWI2</a></td><td> If additional plots for travellers are needed, the further development of around six pitches at the existing approved site, The Orchards, will be supported.</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P1">bledlowcumsaundertonndp-P1</a></td><td> Spatial Plan for the Parish</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P2">bledlowcumsaundertonndp-P2</a></td><td> Development within Settlements</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P3">bledlowcumsaundertonndp-P3</a></td><td> Molins, South Saunderton</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P4">bledlowcumsaundertonndp-P4</a></td><td> Design Management in Bledlow Village and Pitch Green</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P5">bledlowcumsaundertonndp-P5</a></td><td> Design Management in Bledlow Ridge</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P6">bledlowcumsaundertonndp-P6</a></td><td> Design Management in the Parish</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P7">bledlowcumsaundertonndp-P7</a></td><td> Sustainable Design in the Greenbelt</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P8">bledlowcumsaundertonndp-P8</a></td><td> Rural Diversification</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P9">bledlowcumsaundertonndp-P9</a></td><td> Employment</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P10">bledlowcumsaundertonndp-P10</a></td><td> Environment</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P11">bledlowcumsaundertonndp-P11</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P12">bledlowcumsaundertonndp-P12</a></td><td> Bledlow Ridge School</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P13">bledlowcumsaundertonndp-P13</a></td><td> Connecting the Parish</td></tr>
+    
+      <tr><td><a href="./bledlowcumsaundertonndp-P14">bledlowcumsaundertonndp-P14</a></td><td> Renewable and Low Carbon Energy</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-A1">longwickcumilmerndp-A1</a></td><td> Development at Longwick Village</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-A2">longwickcumilmerndp-A2</a></td><td> New Housing Allocations</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-A3">longwickcumilmerndp-A3</a></td><td> Retaining Longwick Village’s Distinct Rural Identity</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-A4">longwickcumilmerndp-A4</a></td><td> Local Green Space Designations</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-A5">longwickcumilmerndp-A5</a></td><td> Small Scale Business Space</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-A6">longwickcumilmerndp-A6</a></td><td> Shoulder of Mutton Public House</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-L1">longwickcumilmerndp-L1</a></td><td> Site Allocation on the eastern side of Thame Road, leading around to Bar Lane</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-L2">longwickcumilmerndp-L2</a></td><td> Site Allocation of land at Boxer Road/ Barn Road</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-L3">longwickcumilmerndp-L3</a></td><td> Site Allocation of land on Thame Road east of Chestnut Way junction</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-L4">longwickcumilmerndp-L4</a></td><td> Site Allocation of land at Rose Farm frontage and South</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-L5">longwickcumilmerndp-L5</a></td><td> Site Allocation of land adjacent to Red House Farm</td></tr>
+    
+      <tr><td><a href="./longwickcumilmerndp-L6">longwickcumilmerndp-L6</a></td><td> Site Allocation of land adjacent to Anderdons Farm</td></tr>
+    
+      <tr><td><a href="./dawshillndp-P1">dawshillndp-P1</a></td><td> Protection and Improvement of the Natural Environment</td></tr>
+    
+      <tr><td><a href="./dawshillndp-P2">dawshillndp-P2</a></td><td> Trees, Hedgerows and Woodlands</td></tr>
+    
+      <tr><td><a href="./dawshillndp-P3">dawshillndp-P3</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./dawshillndp-P4">dawshillndp-P4</a></td><td> Backland Development</td></tr>
+    
+      <tr><td><a href="./dawshillndp-P5">dawshillndp-P5</a></td><td> Flooding and Drainage</td></tr>
+    
+      <tr><td><a href="./dawshillndp-P6">dawshillndp-P6</a></td><td> Quality Design</td></tr>
+    
+      <tr><td><a href="./dawshillndp-P7">dawshillndp-P7</a></td><td> New Shops</td></tr>
+    
+      <tr><td><a href="./dawshillndp-P8">dawshillndp-P8</a></td><td> Scale of Local Non-Residential Development</td></tr>
+    
+      <tr><td><a href="./ickfordndp-NE1">ickfordndp-NE1</a></td><td> Landscape, Views And Dark Skies</td></tr>
+    
+      <tr><td><a href="./ickfordndp-NE2">ickfordndp-NE2</a></td><td> Green Infrastructure & Biodiversity</td></tr>
+    
+      <tr><td><a href="./ickfordndp-NE3">ickfordndp-NE3</a></td><td> Local Green Spaces</td></tr>
+    
+      <tr><td><a href="./ickfordndp-BEH1">ickfordndp-BEH1</a></td><td> Heritage Assets</td></tr>
+    
+      <tr><td><a href="./ickfordndp-BEH2">ickfordndp-BEH2</a></td><td> Design In The Conservation Area</td></tr>
+    
+      <tr><td><a href="./ickfordndp-BEH3">ickfordndp-BEH3</a></td><td> The Setting Of The Conservation Area</td></tr>
+    
+      <tr><td><a href="./ickfordndp-BEH4">ickfordndp-BEH4</a></td><td> Non Designated Heritage Assets</td></tr>
+    
+      <tr><td><a href="./ickfordndp-F1">ickfordndp-F1</a></td><td> Flooding</td></tr>
+    
+      <tr><td><a href="./ickfordndp-ND1">ickfordndp-ND1</a></td><td> Settlement Boundary</td></tr>
+    
+      <tr><td><a href="./ickfordndp-ND2">ickfordndp-ND2</a></td><td> High Quality Design</td></tr>
+    
+      <tr><td><a href="./ickfordndp-ND3">ickfordndp-ND3</a></td><td> New Housing Development</td></tr>
+    
+      <tr><td><a href="./ickfordndp-ND4">ickfordndp-ND4</a></td><td> Housing Mix And Affordability</td></tr>
+    
+      <tr><td><a href="./ickfordndp-TT1">ickfordndp-TT1</a></td><td> Traffic And Transport</td></tr>
+    
+      <tr><td><a href="./ickfordndp-E1">ickfordndp-E1</a></td><td> Economic Opportunities</td></tr>
+    
+      <tr><td><a href="./ickfordndp-CF1">ickfordndp-CF1</a></td><td> Community Facilities</td></tr>
+    
+      <tr><td><a href="./greatlittlekimblecumilmerndp-KIM1">greatlittlekimblecumilmerndp-KIM1</a></td><td> Settlement Boundaries</td></tr>
+    
+      <tr><td><a href="./greatlittlekimblecumilmerndp-KIM2">greatlittlekimblecumilmerndp-KIM2</a></td><td> Design Principles</td></tr>
+    
+      <tr><td><a href="./greatlittlekimblecumilmerndp-KIM3">greatlittlekimblecumilmerndp-KIM3</a></td><td> Housing Site Allocations</td></tr>
+    
+      <tr><td><a href="./greatlittlekimblecumilmerndp-KIM4">greatlittlekimblecumilmerndp-KIM4</a></td><td> Schools</td></tr>
+    
+      <tr><td><a href="./greatlittlekimblecumilmerndp-KIM5">greatlittlekimblecumilmerndp-KIM5</a></td><td> Landscape Buffer</td></tr>
+    
+      <tr><td><a href="./greatlittlekimblecumilmerndp-KIM6">greatlittlekimblecumilmerndp-KIM6</a></td><td> Employment</td></tr>
+    
+      <tr><td><a href="./greatlittlekimblecumilmerndp-KIM7">greatlittlekimblecumilmerndp-KIM7</a></td><td> Community & Leisure Uses</td></tr>
+    
+      <tr><td><a href="./greatlittlekimblecumilmerndp-KIM8">greatlittlekimblecumilmerndp-KIM8</a></td><td> Protecting International Habitats</td></tr>
+    
+      <tr><td><a href="./greatlittlekimblecumilmerndp-KIM9">greatlittlekimblecumilmerndp-KIM9</a></td><td> Section 106 Agreements</td></tr>
+    </table>
+</ul>
+</div>
+
+
+
+        </main>
+      </div>
+    
+
+    
+  
+
+
+
+
+
+
+
+<footer class="govuk-footer " role="contentinfo"
+        >
+  <div class="govuk-width-container ">
+    
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        
+          <h2 class="govuk-visually-hidden">Support links</h2>
+              <ul class="govuk-footer__inline-list">
+                
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/cookies">
+                      Cookies
+                    </a>
+                  </li>
+                
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/accessibility-statement">
+                      Accessibility statement
+                    </a>
+                  </li>
+                
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/design-system">
+                      Design system
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          
+          
+            <div class="govuk-footer__meta-custom">
+              The <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">software</a> and <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">data</a> used to build these pages is <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/blob/master/LICENSE">open source</a>.
+            </div>
+          
+        
+        <svg
+          role="presentation"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://digital-land.github.io/javascripts/dl-cookies.js"></script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- end google analytics -->
+	
+
+	<script src="https://digital-land.github.io/javascripts/govuk/govuk-frontend.min.js"></script>
+	<script>
+		// initiate all GOVUK components
+		window.GOVUKFrontend.initAll();
+	</script>
+
+	
+	
+	<script src="https://digital-land.github.io/javascripts/dl-frontend.js"></script>
+	<script>
+		// adds any necessary polyfills
+		window.DLFrontend.polyfill();
+	</script>
+	
+
+
+  </body>
+</html>
