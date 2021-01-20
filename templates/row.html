@@ -49,7 +49,7 @@
 
 {%- set areaproperties %}
 {%- for i in row.keys() %}
-{%- if i not in ["id", "resource", "geometry", "has_geometry", "geometry_url", "slug", "href"] %}
+{%- if i not in ["id", "resource", "geometry", "geometry_url", "slug", "href"] %}
 <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
     {{- i }}
@@ -59,7 +59,7 @@
     <a href="https://digital-land.github.io/organisation/{{row[i]|replace(':','/')}}" class="govuk-link">{{ row[i]|organisation_id_to_name }}</a>
     <span title="Key in organisation dataset: {{ row[i] }}" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Key in the organisation dataset is </span>{{ row[i] }})</span>
     {%- elif i == "geographies" %}
-      {%- set geography_url = row[i]|geography_to_url %}
+      {%- set geography_url = row['geography_url'] if 'geography_url' in row else row[i]|geography_to_url %}
       {%- set geography_name = row[i]|geography_to_name %}
       {%- if geography_url != None %}
         <a href={{ geography_url }} class="govuk-link">
@@ -93,12 +93,18 @@
     </div>
 </div>
 
-{%- if row["has_geometry"] %}
+{%- if 'geometry_url' in row and row['geometry_url'] %}
+  {%- set geometry_url = row['geometry_url'] %}
+{%- elif 'geographies' in row and row['geographies'] %}
+  {%- set geometry_url = row['geographies']|geography_to_geometry_url %}
+{%- endif %}
+
+{%- if geometry_url %}
 {{ dlMap({
     "id": "aMap",
     "classes": "govuk-!-margin-top-4 govuk-!-margin-bottom-2",
     "attributes": {
-        "data-geojson-urls": row["geometry_url"]
+      "data-geojson-urls": geometry_url
     },
     "height": "460"
 }) }}
