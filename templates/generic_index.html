@@ -19,26 +19,31 @@
 
 {# <p class="govuk-body">Showing {{ index['count'] }} records from {{ index['organisation']|length }} organisations.</p> #}
 
-<div>
-    <!-- <ul class="govuk-list govuk-list--bullet"> -->
-    <table>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     {%- for item in index['items'] %}
-    {%- set ns = namespace(row_name="") %}
-    {# {% if row['site'] %}
-      {% set ns.row_name = row['site'] %}
-        {% if row['site-address'] %}
-        {% set ns.row_name = ns.row_name + ", " + row['site-address'] %}
-        {% endif %}
-      {% set ns.row_name = ns.row_name + " (" + row['slug']|clean_slug + ")" %}
-    {% elif row['name'] %}
-      {% set ns.row_name = row['slug']|clean_slug + " - " + row['name'] %}
-    {% else %}
-      {% set ns.row_name = row['slug']|clean_slug %}
-      {% endif %} #}
-      <tr><td><a href="{{ item['href'] }}">{{ item['reference'] }}</a></td><td> {{ item['text'] }}</td></tr>
+      {%- set ns = namespace(row_name="") %}
+      {# {% if row['site'] %}
+        {% set ns.row_name = row['site'] %}
+          {% if row['site-address'] %}
+          {% set ns.row_name = ns.row_name + ", " + row['site-address'] %}
+          {% endif %}
+        {% set ns.row_name = ns.row_name + " (" + row['slug']|clean_slug + ")" %}
+      {% elif row['name'] %}
+        {% set ns.row_name = row['slug']|clean_slug + " - " + row['name'] %}
+      {% else %}
+        {% set ns.row_name = row['slug']|clean_slug %}
+        {% endif %} #}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h4 class="govuk-heading-s govuk-!-font-weight-regular"><a class="govuk-link" href="{{ item['href'] }}">{{ item['reference'] }}</a></h4>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1">{{ item['text'] }}</p>
+      </div>
+    </div>
     {%- endfor %}
-    </table>
-</ul>
+  </div>
 </div>
 
 
