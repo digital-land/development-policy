@@ -1,1 +1,17 @@
 {%- extends "digital-land-frontend/page-per-thing/record.html" %}
+{% from 'digital-land-frontend/components/inset-card/macro.html' import dlInsetCard %}
+
+{% block recordTable %}
+{{ super() }}
+{% set doc_id = row['development-policy']|policy_to_development_plan %}
+{% if doc_id %}
+<div class="govuk-grid-column-one-third">
+  {{ dlInsetCard({
+    "classes": "dlf-inset-card--s dlf-inset-card--top govuk-!-margin-bottom-6",
+    "heading": "Documents that contain this policy",
+    "href": doc_id|dev_doc_url,
+    "text": doc_id|dev_doc_to_name
+  }) }}
+</div>
+{% endif %}
+{% endblock recordTable %}
