@@ -9,8 +9,8 @@
   {{ dlInsetCard({
     "classes": "dlf-inset-card--s dlf-inset-card--top govuk-!-margin-bottom-6",
     "heading": "Documents that contain this policy",
-    "href": doc_id|dev_doc_url,
-    "text": doc_id|dev_doc_to_name
+    "href": doc_id|dev_doc_mapper("url"),
+    "text": doc_id|dev_doc_mapper
   }) }}
 </div>
 {% endif %}
