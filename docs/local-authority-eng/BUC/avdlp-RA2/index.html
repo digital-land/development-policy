@@ -147,7 +147,7 @@ crossorigin="" />
                 </a>
             </li><li class="dlf-subnav__list-item">
                 <a class="dlf-subnav__list-item__link" href="#referenced-by" data-module-sub-nav="tab">
-                0 References
+                3 References
                 </a>
             </li>
         </ul>
@@ -157,6 +157,16 @@ crossorigin="" />
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/development-policy/local-authority-eng/BUC/avdlp-RA2</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">organisation
+            </dt>
+            <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/BUC" class="govuk-link">Buckinghamshire Council</a>
+<span title="Organisation identifier: local-authority-eng:BUC" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:BUC)</span>
+            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">development-policy
+            </dt>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">avdlp-RA2</span>            </dd>
+        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">name
             </dt>
             <dd class="govuk-summary-list__value">                Loss of open gaps and consolidation of settlements            </dd>
@@ -165,20 +175,10 @@ crossorigin="" />
             </dt>
             <dd class="govuk-summary-list__value">                2004-01-01            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">development-policy
-            </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">avdlp-RA2</span>            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">geographies
             </dt>
             <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/local-authority-district/E07000004" class="govuk-link">Aylesbury Vale</a>
 <span title="Geography identifier: E07000004" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Geography identifier is </span>E07000004)</span>
-            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">organisation
-            </dt>
-            <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/BUC" class="govuk-link">Buckinghamshire Council</a>
-<span title="Organisation identifier: local-authority-eng:BUC" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:BUC)</span>
             </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
@@ -234,22 +234,22 @@ crossorigin="" />
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
-            <th>development-policy</th>
-            <th>start-date</th>
+            <th>geographies</th>
             <th>organisation</th>
             <th>name</th>
-            <th>geographies</th>
+            <th>development-policy</th>
+            <th>start-date</th>
         </tr>
     </thead>
     <tbody>        <tr>
             <td>2020-12-21</td>
             <td><a href="https://github.com/digital-land/development-policy-collection/tree/main/transformed/development-policy/781ef38ab8a51f6a4a0e603d8ddf8c65a5c4f9e707db3fa25e31f0614b3eae9a.csv#L87">781ef38ab8a5...</a></td>
             <td>86</td>
-                <td>avdlp-RA2</td> 
-                <td>2004-01-01</td> 
+                <td>E07000004</td> 
                 <td>local-authority-eng:BUC</td> 
                 <td>Loss of open gaps and consolidation of settlements</td> 
-                <td>E07000004</td> 
+                <td>avdlp-RA2</td> 
+                <td>2004-01-01</td> 
         </tr>    </tbody>
 </table>
 
@@ -260,7 +260,23 @@ crossorigin="" />
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h2 class="govuk-heading-m dlf-subnav__heading">Referenced by</h2>
-            <p class="govuk-body">This record is referenced by 0 other planning related data records.</p>
+            <p class="govuk-body">This record is referenced by 3 other planning related data records.</p>
+            <h3 class="govuk-heading-s">Geography</h3>
+            <ul class="govuk-list govuk-list--bullet">                <li>
+                    <a href=/local-authority-district/E07000004>Aylesbury Vale</a>
+                    <span class="secondary-text data-reference">(57)</span>
+                </li>
+</ul>
+            <h3 class="govuk-heading-s">Document</h3>
+            <ul class="govuk-list govuk-list--bullet">                <li>
+                    <a href=/development-plan-document/local-authority-eng/AYL/dev-plan-buc-avdlp>Adopted Aylesbury Vale District Local Plan (AVDLP) 2004</a>
+                    <span class="secondary-text data-reference">(1)</span>
+                </li>
+                <li>
+                    <a href=/development-plan-document/local-authority-eng/BUC/dev-plan-buc-avdlp>Adopted Aylesbury Vale District Local Plan (AVDLP) 2004</a>
+                    <span class="secondary-text data-reference">(9)</span>
+                </li>
+</ul>
 </div>
     </div>
 </div>
@@ -364,7 +380,7 @@ crossorigin="" />
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
             const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/leaflet-spike/?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
             console.log(url)
             if ($nationalMapLink) {
                 // only show this for the datasets we've added to the national map

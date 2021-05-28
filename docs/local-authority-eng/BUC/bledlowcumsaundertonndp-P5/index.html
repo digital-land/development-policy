@@ -147,7 +147,7 @@ crossorigin="" />
                 </a>
             </li><li class="dlf-subnav__list-item">
                 <a class="dlf-subnav__list-item__link" href="#referenced-by" data-module-sub-nav="tab">
-                0 References
+                2 References
                 </a>
             </li>
         </ul>
@@ -157,9 +157,12 @@ crossorigin="" />
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/development-policy/local-authority-eng/BUC/bledlowcumsaundertonndp-P5</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">development-policy
+            <dt class="govuk-summary-list__key">development-policy-categories
             </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">bledlowcumsaundertonndp-P5</span>            </dd>
+            <dd class="govuk-summary-list__value"><div><a href="https://digital-land.github.io/development-policy-category/design" class="govuk-link">Design</a>
+<span title="development-policy-categories identifier: design" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">development-policy-categories identifier is </span>design)</span>
+</div>
+            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">geographies
             </dt>
@@ -167,12 +170,9 @@ crossorigin="" />
 <span title="Geography identifier: E04001592" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Geography identifier is </span>E04001592)</span>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">development-policy-categories
+            <dt class="govuk-summary-list__key">development-policy
             </dt>
-            <dd class="govuk-summary-list__value"><div><a href="https://digital-land.github.io/development-policy-category/design" class="govuk-link">Design</a>
-<span title="development-policy-categories identifier: design" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">development-policy-categories identifier is </span>design)</span>
-</div>
-            </dd>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">bledlowcumsaundertonndp-P5</span>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">organisation
             </dt>
@@ -241,24 +241,24 @@ crossorigin="" />
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
-            <th>development-policy</th>
-            <th>start-date</th>
             <th>development-policy-categories</th>
+            <th>geographies</th>
             <th>organisation</th>
             <th>name</th>
-            <th>geographies</th>
+            <th>development-policy</th>
+            <th>start-date</th>
         </tr>
     </thead>
     <tbody>        <tr>
             <td>2020-12-21</td>
             <td><a href="https://github.com/digital-land/development-policy-collection/tree/main/transformed/development-policy/781ef38ab8a51f6a4a0e603d8ddf8c65a5c4f9e707db3fa25e31f0614b3eae9a.csv#L915">781ef38ab8a5...</a></td>
             <td>914</td>
-                <td>bledlowcumsaundertonndp-P5</td> 
-                <td>2017-01-01</td> 
                 <td>design</td> 
+                <td>E04001592</td> 
                 <td>local-authority-eng:BUC</td> 
                 <td>Design Management in Bledlow Ridge</td> 
-                <td>E04001592</td> 
+                <td>bledlowcumsaundertonndp-P5</td> 
+                <td>2017-01-01</td> 
         </tr>    </tbody>
 </table>
 
@@ -269,7 +269,19 @@ crossorigin="" />
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h2 class="govuk-heading-m dlf-subnav__heading">Referenced by</h2>
-            <p class="govuk-body">This record is referenced by 0 other planning related data records.</p>
+            <p class="govuk-body">This record is referenced by 2 other planning related data records.</p>
+            <h3 class="govuk-heading-s">Category</h3>
+            <ul class="govuk-list govuk-list--bullet">                <li>
+                    <a href=/development-policy-category/design>Design</a>
+                    <span class="secondary-text data-reference">(33)</span>
+                </li>
+</ul>
+            <h3 class="govuk-heading-s">Document</h3>
+            <ul class="govuk-list govuk-list--bullet">                <li>
+                    <a href=/development-plan-document/neighbourhood-plan-area/bledlow-cum-saunderton/neigh-plan-buc-bledlowcumsaundertonndp>Bledlow-cum-Saunderton Neighbourhood Plan 2016-2033</a>
+                    <span class="secondary-text data-reference">(46)</span>
+                </li>
+</ul>
 </div>
     </div>
 </div>
@@ -373,7 +385,7 @@ crossorigin="" />
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
             const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/leaflet-spike/?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
             console.log(url)
             if ($nationalMapLink) {
                 // only show this for the datasets we've added to the national map
