@@ -215,7 +215,7 @@ crossorigin="" />
     class="dl-map govuk-!-margin-top-4"
     id="dlMap"
     data-module="boundary-map"
-    style="height: 460px;" data-geojson-urls="https://raw.githubusercontent.com/digital-land/local-authority-district/main/docs/E07000004/geometry.geojson"   
+    style="height: 460px;"   
 >
     <noscript>To view this map, you need to enable JavaScript.</noscript>
 </div>
@@ -242,22 +242,22 @@ crossorigin="" />
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
+            <th>organisation</th>
+            <th>development-policy-categories</th>
             <th>name</th>
             <th>geographies</th>
             <th>development-policy</th>
-            <th>organisation</th>
-            <th>development-policy-categories</th>
         </tr>
     </thead>
     <tbody>        <tr>
             <td>2020-12-21</td>
             <td><a href="https://github.com/digital-land/development-policy-collection/tree/main/transformed/development-policy/781ef38ab8a51f6a4a0e603d8ddf8c65a5c4f9e707db3fa25e31f0614b3eae9a.csv#L122">781ef38ab8a5...</a></td>
             <td>121</td>
+                <td>local-authority-eng:BUC</td> 
+                <td>area/location-specific-policy;allocated-sites</td> 
                 <td>Aylesbury north of A41</td> 
                 <td>E07000004</td> 
                 <td>valp-D1-AGT3</td> 
-                <td>local-authority-eng:BUC</td> 
-                <td>area/location-specific-policy;allocated-sites</td> 
         </tr>    </tbody>
 </table>
 
@@ -392,21 +392,25 @@ crossorigin="" />
     const datasetName = "development-policy"
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
-    const mapComponent = new DLMaps.Map($mapElement).init({
-        initZoomCallback: function (featureGroup) {
-            console.log("initial load completed")
-            // do we need to check there isn't more than one shape?
-            const center = featureGroup.getBounds().getCenter()
-            const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
-            console.log(url)
-            if ($nationalMapLink) {
-                // only show this for the datasets we've added to the national map
-                $nationalMapLink.href = url
-                $nationalMapLink.classList.remove("js-hidden")
-            }
-        }
-    })
+    const mapParams = {
+    initZoomCallback: function (featureGroup, map) {
+          console.log("initial load completed")
+          // do we need to check there isn't more than one shape?
+          const center = featureGroup.getBounds().getCenter()
+          const zoom = map.getZoom()
+          let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+          console.log(url)
+          if ($nationalMapLink) {
+              // only show this for the datasets we've added to the national map
+              $nationalMapLink.href = url
+              $nationalMapLink.classList.remove("js-hidden")
+          }
+      }
+    }
+
+    mapParams.geojsonURLs = ["https://raw.githubusercontent.com/digital-land/local-authority-district/main/docs/E07000004/geometry.geojson"]
+
+    const mapComponent = new DLMaps.Map($mapElement).init(mapParams)
 </script>
 <script>
     // Initialise back to top

@@ -142,16 +142,6 @@
             </dt>
             <dd class="govuk-summary-list__value">                Quality Design            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Geography
-            </dt>
-            <dd class="govuk-summary-list__value">LPP6
-<span title="Geography identifier: /development-policy-area/local-authority-eng/BUC/LPP6" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Geography identifier is </span>/development-policy-area/local-authority-eng/BUC/LPP6)</span>
-            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Development policy
-            </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">dawshillndp-P6</span>            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Development policy categories
             </dt>
             <dd class="govuk-summary-list__value"><div><a href="https://digital-land.github.io/development-policy-category/design" class="govuk-link">Design</a>
@@ -165,9 +155,19 @@
 <span title="Organisation identifier: local-authority-eng:BUC" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:BUC)</span>
             </dd>
         </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Geography
+            </dt>
+            <dd class="govuk-summary-list__value">LPP6
+<span title="Geography identifier: /development-policy-area/local-authority-eng/BUC/LPP6" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Geography identifier is </span>/development-policy-area/local-authority-eng/BUC/LPP6)</span>
+            </dd>
+        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Start date
             </dt>
             <dd class="govuk-summary-list__value">                2019-12-12            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Development policy
+            </dt>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">dawshillndp-P6</span>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Entry date
             </dt>
@@ -206,11 +206,11 @@
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
+            <th>organisation</th>
+            <th>development-policy-categories</th>
             <th>name</th>
             <th>geographies</th>
             <th>development-policy</th>
-            <th>organisation</th>
-            <th>development-policy-categories</th>
             <th>start-date</th>
         </tr>
     </thead>
@@ -218,11 +218,11 @@
             <td>2020-12-21</td>
             <td><a href="https://github.com/digital-land/development-policy-collection/tree/main/transformed/development-policy/781ef38ab8a51f6a4a0e603d8ddf8c65a5c4f9e707db3fa25e31f0614b3eae9a.csv#L942">781ef38ab8a5...</a></td>
             <td>941</td>
+                <td>local-authority-eng:BUC</td> 
+                <td>design</td> 
                 <td>Quality Design</td> 
                 <td>/development-policy-area/local-authority-eng/BUC/LPP6</td> 
                 <td>dawshillndp-P6</td> 
-                <td>local-authority-eng:BUC</td> 
-                <td>design</td> 
                 <td>2019-12-12</td> 
         </tr>    </tbody>
 </table>
@@ -344,21 +344,24 @@
     const datasetName = "development-policy"
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
-    const mapComponent = new DLMaps.Map($mapElement).init({
-        initZoomCallback: function (featureGroup) {
-            console.log("initial load completed")
-            // do we need to check there isn't more than one shape?
-            const center = featureGroup.getBounds().getCenter()
-            const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
-            console.log(url)
-            if ($nationalMapLink) {
-                // only show this for the datasets we've added to the national map
-                $nationalMapLink.href = url
-                $nationalMapLink.classList.remove("js-hidden")
-            }
-        }
-    })
+    const mapParams = {
+    initZoomCallback: function (featureGroup, map) {
+          console.log("initial load completed")
+          // do we need to check there isn't more than one shape?
+          const center = featureGroup.getBounds().getCenter()
+          const zoom = map.getZoom()
+          let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+          console.log(url)
+          if ($nationalMapLink) {
+              // only show this for the datasets we've added to the national map
+              $nationalMapLink.href = url
+              $nationalMapLink.classList.remove("js-hidden")
+          }
+      }
+    }
+
+
+    const mapComponent = new DLMaps.Map($mapElement).init(mapParams)
 </script>
 <script>
     // Initialise back to top
